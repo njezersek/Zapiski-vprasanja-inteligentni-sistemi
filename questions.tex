@@ -35,7 +35,7 @@ converge to solution, time complexity rises fast with bigger population
 \textbf{4. Describe the main characteristics of genetic algorithms (GA)
 and genetic programming (GP).}
 
-GA is based on evolution. =\textgreater{} I think the same answer as in
+GA is based on evolution. $\rightarrow$ I think the same answer as in
 1. Applies here
 
 GP instead of representing solutions in list/objects, represent them
@@ -54,7 +54,7 @@ encompasses as big a solution space as possible to find a solution close
 to the optimal as possible (eg. 2\^{}30 solution space, population of 10
 will probably not find a very good solution)
 
-\textit{Coevolution}: basically crossover =\textgreater{} two agents
+\textit{Coevolution}: basically crossover $\rightarrow$ two agents
 affect evolution by combining traits.
 
 Was mentioned more in context of solving related problems together
@@ -107,7 +107,7 @@ stochastic universal sampling?}
 
 \textit{Tournaments:} have agents ``battle'' each other, by assigning
 them probabilities according to their fitness values. Best solution
-=\textgreater{} best probability of winning.
+$\rightarrow$ best probability of winning.
 
 \textit{Proportional:} Assign each agent a probability according to
 their fitness value. Use randomly generated numbers to select agents.
@@ -122,12 +122,12 @@ offspring replace the two worst agents from the group
 \textit{Stochastic:} F = sum(all fitness values), N = size of
 population we want. Make a F/N interval. Assign part of the interval to
 each agent according to fitness values. Use RNG to generate numbers, if
-generated number is within an interval of some agent =\textgreater{}
+generated number is within an interval of some agent $\rightarrow$
 choose the agent
 
 \textbf{9. How to prevent niche specialization in GA?}
 
-We punish agents that are too similar to others =\textgreater{}
+We punish agents that are too similar to others $\rightarrow$
 depending on the type of problem (min/max) decrease/increase the fitness
 value
 
@@ -358,7 +358,7 @@ an appropriate action.
 data samples in them, classify new data sample by comparing it to the
 samples in the bags
 
-\textit{Boosting}: grows tree sequentially =\textgreater{} each tree
+\textit{Boosting}: grows tree sequentially $\rightarrow$ each tree
 uses information about errors of previous trees, weak learners ensemble
 
 \textit{Random forests}: build an number of decision trees on
@@ -405,7 +405,7 @@ probabilistic
 learning} technique. It was developed to address the
 attribute-independence problem of the naive bayes classifier.
 
-\textit{SVM:} Support Vector Machine =\textgreater{} constructs a
+\textit{SVM:} Support Vector Machine $\rightarrow$ constructs a
 hyperplane or set of hyperplanes in a high dimensional space which can
 be used for classification or regression.
 
@@ -457,10 +457,6 @@ think, so it must be true)
 
 \textbf{31. What is the no-free-lunch theorem?}
 
-\sout{Nothing is free, if we want an algorithm to work faster we need to
-either change it in some way or get more computational power (upgrade
-computer)} \textasciitilde{} don't know about this tho ...
-
 No universal algorithm is the best algorithm. (we cannot say SVM is
 better than RF, we cannot mathematically prove that)
 
@@ -480,8 +476,6 @@ increases)
 
 \textit{Embedded}: select features in the process of learning (ridge,
 lasso)
-
-\href{https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/}{\textit{https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/}}
 
 \textbf{33. Describe the difference between impurity based and
 context-sensitive attribute evaluation.}
@@ -523,8 +517,6 @@ linear regression) will be set to 0 if they are useless \ldots{}
 \textbf{36. Describe ridge regression (L2) and lasso (L1) and the
 difference between them?}
 
-\href{https://towardsdatascience.com/l1-and-l2-regularization-methods-ce25e7fc831c}{\textit{https://towardsdatascience.com/l1-and-l2-regularization-methods-ce25e7fc831c}}
-
 The key difference between them is the penalty term.
 
 \textit{Lasso → L1} type regularization, which means that it does not
@@ -556,49 +548,48 @@ on it?}
 
 The confusion matrix represents how data was classified by our
 classifier, compared to observed data.
-\includegraphics[width=\columnwidth]{media/image17.png}
 
-TP: true positive, values that the model predicted as positive and are
-observed to be positive
+\begin{center}
+  \begin{tabular}{|c||c|c|c|}
+    \hline
+    $A \diagdown P$ & $C$ & $\neg C$ & \\ \hhline{|=||=|=|=|}
+    $C$ & TP & FN & P \\ \hline
+    $\neg C$ & FP & TN & N \\ \hline
+     & P' & N' & All \\ \hline
+  \end{tabular}
+\end{center}
 
-FP: false positive, values that the model predicted as positive and are
-observed to be negative
-
-FN: false negative, values that the model predicted as negative and are
-observed to be positive
-
-TN: true negative, values that the model predicted as negative and are
-observed to be negative
 
 \textbf{39. Describe ROC curves, sensitivity, specificity, precision,
 recall, F-measure, classification accuracy, mean squared error.}
 
 \textit{Classification accuracy:} (TP + TN)/(TP + TN + FP + FN)
-=\textgreater{} how accurate is the model
+$\rightarrow$ how accurate is the model
 
-\textit{Precision:} TP / (TP + FP) =\textgreater{} what \% of tuples
+\textit{Precision:} TP / (TP + FP) $\rightarrow$ what \% of tuples
 that the classifier labeled as positive are actually positive
 
-\textit{Recall:} TP / (TP + FN) =\textgreater{} what \% of positive
+\textit{Recall:} TP / (TP + FN) $\rightarrow$ what \% of positive
 tuples did the classifier label as positive
 
-\textit{sensitivity} : TP/P =\textgreater{} true positive recognition
+\textit{sensitivity} : TP/P $\rightarrow$ true positive recognition
 rate
 
-\textit{Specificity:} TN/N =\textgreater{} true negative recognition
+\textit{Specificity:} TN/N $\rightarrow$ true negative recognition
 rate
 
 \textit{ROC curve:} shows both y=TP and x=FP rate simultaneously, to
 summarize overall performance we also use area under the ROC curve
 (AUC), the larger AUC is, better the classifier
 
-\textit{F-measure:} =\textgreater{} harmonic mean of precision and
+\textit{F-measure:} $\rightarrow$ harmonic mean of precision and
 recall
+\[ F = \frac{2 \cdot \text{precision} \cdot \text{recall} }{\text{precision} + \text{recall}} \]
 
-\includegraphics[width=2.42708in,height=0.90625in]{media/image12.png}where
-the one Yi is observed Yi and the second is
-predicted
-\includegraphics[width=\columnwidth]{media/image38.png}
+\textit{Mean squared error:}
+\[ \text{MSE} = \frac{1}{n} \sum_{i=1}^n (Y_i - \hat{Y_i})^2\]
+Where $Y_i$ is observed and $\hat{Yi}$ is predicted value.
+
 
 \textbf{40. What are the ideas of unsupervised and semi-supervised
 feature selection?}
@@ -639,23 +630,11 @@ typically provide complementary information.
 Approaches:
 
 \begin{itemize}
-\item
-  \begin{quote}
-  Baseline: concatenate all views
-  \end{quote}
-\item
-  \begin{quote}
-  Construct \emph{tensor space} from views
-  \end{quote}
-\item
-  \begin{quote}
-  Relief like approach (different views contribute to the distances
+\item Baseline: concatenate all views
+\item Construct \emph{tensor space} from views
+\item Relief like approach (different views contribute to the distances
   between objects)
-  \end{quote}
-\item
-  \begin{quote}
-  Multi-view clustering \& feature selection
-  \end{quote}
+\item Multi-view clustering \& feature selection
 \end{itemize}
 
 \textit{Multi-Label:} Each instance may have more than one label
@@ -663,18 +642,9 @@ Approaches:
 Approaches:
 
 \begin{itemize}
-\item
-  \begin{quote}
-  transform to single label case
-  \end{quote}
-\item
-  \begin{quote}
-  Treat multiple labels directly
-  \end{quote}
-\item
-  \begin{quote}
-  Relief like approach (comparing sets of instance labels)
-  \end{quote}
+\item transform to single label case
+\item Treat multiple labels directly
+\item Relief like approach (comparing sets of instance labels)
 \end{itemize}
 
 \textit{Multitask:} learn several related tasks simultaneously with
@@ -746,19 +716,13 @@ produce a similarity matrix?}
 Evaluation of attribute A is the difference between:
 
 \begin{itemize}
-\item
-  \begin{quote}
-  Strength of the forest
-  \end{quote}
-\item
-  \begin{quote}
-  Strength of the forest when values of A are randomly shuffled
-  \end{quote}
+\item Strength of the forest
+\item Strength of the forest when values of A are randomly shuffled
 \end{itemize}
 
 When two instances end in the same leaf of the tree we increase their
 similarity score, average over all trees gives \emph{similarity measure}
-=\textgreater{} similarity matrix
+$\rightarrow$ similarity matrix
 
 \textbf{48. Describe the main parameters of random forests and
 boosting?}
@@ -778,10 +742,6 @@ of an ensemble of weak prediction models, typically decision trees. It
 builds the model in a stage-wise fashion like other boosting methods do
 and it generalizes them by allowing optimization of an arbitrary
 differentiable loss function.
-
-\href{https://corporatefinanceinstitute.com/resources/knowledge/other/gradient-boosting/}{\textit{Gradient
-Boosting - Overview, Tree Sizes,
-Regularization}}
 
 \includegraphics[width=\columnwidth]{media/image33.png}
 
@@ -842,23 +802,10 @@ output of a neural network.
 \textbf{54. Describe the main idea of backpropagation learning for NNs.}
 
 \begin{itemize}
-\item
-  \begin{quote}
-  Initialize the weights to small random numbers, associated with
-  biases.
-  \end{quote}
-\item
-  \begin{quote}
-  Propagate the inputs forward (using activation functions)
-  \end{quote}
-\item
-  \begin{quote}
-  Backpropagate the error (by updating the weights and biases)
-  \end{quote}
+\item Initialize the weights to small random numbers, associated with biases.
+\item Propagate the inputs forward (using activation functions)
+\item Backpropagate the error (by updating the weights and biases)
 \end{itemize}
-
-\href{https://www.youtube.com/watch?v=Ilg3gGewQ5U}{\textit{What is
-backpropagation really doing? \textbar{} Deep learning, chapter 3}}
 
 \textbf{55. Describe the role of criterion (loss) function in
 NN?}
@@ -1099,25 +1046,9 @@ interactions
 \includegraphics[width=\columnwidth]{media/image21.png}
 
 \begin{itemize}
-\item
-  \begin{quote}
-  Alternative formulation of \emph{shapley value}
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  ``hide'' any subset of attributes at a time (2 a subsets!)
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  the feature gets some credit for standalone contributions and for
-  contributions in interactions
-  \end{quote}
+\item Alternative formulation of \emph{shapley value}
+\item ``hide'' any subset of attributes at a time (2 a subsets!)
+\item the feature gets some credit for standalone contributions and for contributions in interactions
 \end{itemize}
 
 \textit{LIME:} Local Interpretable Model-agnostic Explanations,
@@ -1126,32 +1057,10 @@ instance.
 \includegraphics[width=\columnwidth]{media/image25.png}
 
 \begin{itemize}
-\item
-  \begin{quote}
-  Faster than IME, works for many features (text and images)
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  No guarantees that the explanations are faithful and stable.
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  Neighborhood based: curse of dimensionality
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  may not detect interactions due to simple interpretable local model
-  (linear)
-  \end{quote}
+\item Faster than IME, works for many features (text and images)
+\item No guarantees that the explanations are faithful and stable.
+\item Neighborhood based: curse of dimensionality
+\item may not detect interactions due to simple interpretable local model (linear)
 \end{itemize}
 
 \textit{SHAP:} SHapley Additive exPlanation, unification of several
@@ -1202,30 +1111,12 @@ society, intentions in communications
 \textbf{76. Describe how to preprocess text in text mining.}
 
 \begin{itemize}
-\item
-  \begin{quote}
-  To lower case
-  \end{quote}
-\item
-  \begin{quote}
-  Remove punctuation
-  \end{quote}
-\item
-  \begin{quote}
-  Remove numbers
-  \end{quote}
-\item
-  \begin{quote}
-  Remove stopwords (a, and, the, of,...)
-  \end{quote}
-\item
-  \begin{quote}
-  Strip whitespaces
-  \end{quote}
-\item
-  \begin{quote}
-  Stem the text
-  \end{quote}
+\item To lower case
+\item Remove punctuation
+\item Remove numbers
+\item Remove stopwords (a, and, the, of,...)
+\item Strip whitespaces
+\item Stem the text
 \end{itemize}
 
 \textbf{77. Describe lemmatization, stemming, POS tagging, dependency
@@ -1237,8 +1128,6 @@ item
 
 \textit{Stemming}: reduce the words to their root ``state'' (it is
 getting out of use.)
-
-\href{https://blog.bitext.com/what-is-the-difference-between-stemming-and-lemmatization/}{\textit{https://blog.bitext.com/what-is-the-difference-between-stemming-and-lemmatization/}}
 
 \textit{POS tagging}: assigning the correct part of speech (noun,
 verb, subject, object,...) to words
@@ -1253,9 +1142,7 @@ words
 \textbf{78. Describe the basic language resources for English and
 Slovene (or your language).}
 
-Corpora, wiki, SSKJ, FRAN
-
-\includegraphics[width=\columnwidth]{media/image16.png}
+Corpora, wiki, SSKJ, FRAN, GigaFida, KRES, ccKres, GOS, JANES, KAS
 
 \textbf{79. Describe the structure of WordNets.}
 
@@ -1263,34 +1150,13 @@ WordNet is a database composed of synsets (cognitive synonyms):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item
-  \begin{quote}
-  Synonyms
-  \end{quote}
-\item
-  \begin{quote}
-  Hypernyms
-  \end{quote}
-\item
-  \begin{quote}
-  Hyponyms
-  \end{quote}
-\item
-  \begin{quote}
-  Meronyms
-  \end{quote}
-\item
-  \begin{quote}
-  holonyms
-  \end{quote}
-\item
-  \begin{quote}
-  Etc.
-  \end{quote}
+\item Synonyms
+\item Hypernyms
+\item Hyponyms
+\item Meronyms
+\item Holonyms
+\item Etc.
 \end{enumerate}
-
-\href{https://wordnet.princeton.edu/}{\textit{https://wordnet.princeton.edu/}}
-(maybe this will help)
 
 WordNet® is a large lexical database of English. Nouns, verbs,
 adjectives and adverbs are grouped into sets of cognitive synonyms
@@ -1385,11 +1251,9 @@ Wbd = TFbd * IDFbd
 
 Where TFbd is frequency of the term b in document d
 
-\textbf{88. Describe precision, recall, and F1 measures in document
-retrieval.}\includegraphics[width=\columnwidth]{media/image23.png}
+\textbf{88. Describe precision, recall, and F1 measures in document retrieval.}
 
-\textit{Precision}: proportion of relevant documents in the obtained
-ones
+\textit{Precision}: proportion of relevant documents in the obtained ones
 
 \textit{Recall}: proportion of obtained relevant documents. How many
 of the relevant documents we succeeded retrieving.
@@ -1397,9 +1261,7 @@ of the relevant documents we succeeded retrieving.
 F1 is just weighted harmonic mean (where beta = 1), weighted precision
 and recall
 
-( 2 * P * R / P + R)
-
-\includegraphics[width=\columnwidth]{media/image15.png}
+\[ F1 = \frac{2 \cdot \text{precision} \cdot \text{recall} }{\text{precision} + \text{recall}} \]
 
 \textbf{89. Describe problems of web search and possible improvements.}
 
@@ -1407,81 +1269,46 @@ Problems
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item
-  \begin{quote}
-  No content control
-  \end{quote}
-\item
-  \begin{quote}
-  Different quality of documents
-  \end{quote}
-\item
-  \begin{quote}
-  Up-to-date?
-  \end{quote}
-\item
-  \begin{quote}
-  (in)valid links
-  \end{quote}
-\item
-  \begin{quote}
-  Search engine manipulation (link farms)
-  \end{quote}
+\item No content control
+\item Different quality of documents
+\item Up-to-date?
+\item (in)valid links
+\item Search engine manipulation (link farms)
 \end{enumerate}
 
 Improvements:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item
-  \begin{quote}
-  Use dictionary, thesaurus (a book that lists words in groups of
+\item Use dictionary, thesaurus (a book that lists words in groups of
   synonyms and related concepts), synonyms
-  \end{quote}
-\item
-  \begin{quote}
-  Query expansion with relevance information (user feedback,
+\item Query expansion with relevance information (user feedback,
   personalization, trusted document sources)
-  \end{quote}
-\item
-  \begin{quote}
-  Semantic search
-  \end{quote}
-\item
-  \begin{quote}
-  Specific types of queries require specific approaches
-  \end{quote}
-\item
-  \begin{quote}
-  Trustful sources - Wikipedia
-  \end{quote}
-\item
-  \begin{quote}
-  Hubs with relevant links
-  \end{quote}
-\item
-  \begin{quote}
-  Graph theory and analysis
-  \end{quote}
-\item
-  \begin{quote}
-  Additional information: titles, meta-information, URL
-  \end{quote}
-\item
-  \begin{quote}
-  Ranking of documents based on links
-  \end{quote}
+\item Semantic search
+\item Specific types of queries require specific approaches
+\item Trustful sources - Wikipedia
+\item Hubs with relevant links
+\item Graph theory and analysis
+\item Additional information: titles, meta-information, URL
+\item Ranking of documents based on links
 \end{enumerate}
 
-\textbf{90. Describe the idea of the PageRank algorithm and its possible
-uses.}
+\textbf{90. Describe the idea of the PageRank algorithm and its possible uses.}
 
 Page rank algorithm determines the rank of a page based on the quality
 and number of pages pointing to it
 
 Possible uses: was used by google to order search results
 
-\includegraphics[width=\columnwidth]{media/image2.png}
+\begin{align*}
+  p \quad &\dots \quad \text{web page} \\
+  O(p) \quad &\dots \quad \text{pages pointed to by $p$} \\
+  I(p) = \{i_1, \dots, i_n\} \quad &\dots \quad \text{pages pointing to $p$} \\
+  d \in [0, 1] \quad &\dots \quad \text{damping factor, usually $\approx 0.85$} \\
+  \pi(p) \quad &\dots \quad \text{page quality} \\
+\end{align*}
+\[ \pi(p) = (1-d) + d\frac{\pi(i_1)}{O(i_1)} + \dots + d\frac{\pi(i_n)}{O(i_n)}\]
+
 
 \textbf{91. Describe the main ideas and implementation of LSA, word2vec,
 ELMo, and BERT.}
@@ -1596,60 +1423,21 @@ train a classifier built on the top layer for each task that you fine
 tune for , e.g ., Q\&A, NER, inference.
 
 \begin{itemize}
-\item
-  \begin{quote}
-  Sentence classification (sentiment, grammar\ldots):
-  \end{quote}
+\item Sentence classification (sentiment, grammar\ldots)
+\item Two sentence classification
+\item Questions/answers
 \end{itemize}
 
-\includegraphics[width=\columnwidth]{media/image13.png}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  Two sentence classification:
-  \end{quote}
-\end{itemize}
-
-\includegraphics[width=\columnwidth]{media/image19.png}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  Questions/answers:
-  \end{quote}
-\end{itemize}
-
-\includegraphics[width=\columnwidth]{media/image37.png}
 
 \textbf{97. Describe the idea and a few uses of cross-lingual
 embeddings?}
 
 Word clouds of different languages can be aligned.
 
-\includegraphics[width=\columnwidth]{media/image22.png}
-
-\includegraphics[width=\columnwidth]{media/image27.png}
-
 \begin{itemize}
-\item
-  \begin{quote}
-  transfer between languages: models, resources
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  embedded words enter neural networks
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  replace them with cross lingual embeddings and easily switch languages
-  \end{quote}
+\item transfer between languages: models, resources
+\item embedded words enter neural networks
+\item replace them with cross lingual embeddings and easily switch languages
 \end{itemize}
 
 \textbf{98. Describe a few semantic technologies and a few important NLP
@@ -1660,11 +1448,9 @@ knowledge. Summarization, document relations, clustering of documents,
 related news, new topic detection, q\&a, named entity recognition,
 inference, coreference resolution.
 
-\textit{NLP tasks:}
-
-\begin{quote}
-\includegraphics[width=\columnwidth]{media/image29.png}
-\end{quote}
+\textit{NLP tasks:} document retrieval, information extraction, document 
+classification, document summarization, sentiment analysis, text mining, 
+machine translation, language generation
 
 \textbf{99. How to approach text summarization, sentiment
 classification, machine translation (MT), or question answering
@@ -1720,10 +1506,9 @@ Encoder takes a sentence and transforms it into latent vector
 representation. Decoder takes that latent vector representation and
 transforms it back into a sentence. Both are language specific.
 
-\includegraphics[width=\columnwidth]{media/image40.png}
+% \includegraphics[width=\columnwidth]{media/image40.png}
 
-\textbf{102. What is the} \textbf{attention mechanism} \textbf{in deep
-neural networks?}
+\textbf{102. What is the attention mechanism in deep neural networks?}
 
 Usually for each word in a sentence a hidden state vector called context
 is output from an encoder and this vector is fed back into the input and
@@ -1732,14 +1517,7 @@ produces output one step at a time. This is problematic for long
 sentences, this is where the attention mechanism comes in which produces
 a special context vector for each decoder time step.
 
-\hypertarget{section}{%
-\section{\texorpdfstring{\protect\includegraphics[width=\columnwidth]{media/image18.png}}{}}\label{section}}
-
-\hypertarget{reinforcement-learning-rl}{%
-\section{\texorpdfstring{\textit{Reinforcement learning
-(RL)}}{Reinforcement learning (RL)}}\label{reinforcement-learning-rl}}
-
-\href{https://www.youtube.com/watch?v=nyjbcRQ-uQ8\&list=PLZbbT5o_s2xoWNVdDudn51XM8lOuZ_Njv\&index=1\&ab_channel=deeplizard}{\textbf{\textit{https://www.youtube.com/watch?v=nyjbcRQ-uQ8\&list=PLZbbT5o\_s2xoWNVdDudn51XM8lOuZ\_Njv\&index=1\&ab\_channel=deeplizard}}}
+\section{Reinforcement learning}
 
 \textbf{103. Describe when and why to apply RL.}
 
@@ -1771,31 +1549,19 @@ Exploit: use information to make better decision
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item
-  \begin{quote}
-  Policy: defines agents choices and actions in a given time
-  \end{quote}
-\item
-  \begin{quote}
-  Reward: feedback from the environment. Agent tries to maximize it
-  \end{quote}
-\item
-  \begin{quote}
-  Value: agents expectation of what can be expected in a given state (it
+\item Policy: defines agents choices and actions in a given time
+\item Reward: feedback from the environment. Agent tries to maximize it
+\item Value: agents expectation of what can be expected in a given state (it
   predicts rewards)
-  \end{quote}
-\item
-  \begin{quote}
-  Model: internal representation of environment
-  \end{quote}
+\item Model: internal representation of environment
 \end{enumerate}
 
 \textbf{107. How the interface between the agent and environment works
 in RL?}
 
 Agents and the environment interact at discrete time steps. Agent
-observes state ``s(t)'' at step ``t'' and produces an action ``a(t)'',
-giving a resulting reward ``r(t + 1)'' and next state ``s(t + 1)''.
+observes state $s(t)$ at step $t$ and produces an action $a(t)$,
+giving a resulting reward $r(t + 1)$ and next state $s(t + 1)$.
 
 \textbf{108. Describe returns for episodic and continuing tasks.}
 
@@ -1821,9 +1587,10 @@ terminal state.
 
 \textbf{109. What is the discounted return, and what is its role?}
 
-\includegraphics[width=\columnwidth]{media/image26.png}
+\[ R_t = r_{i+1} + \gamma r_{i+2} + \gamma^2 r_{i+3} + \dots = \sum_{k=0}^\infty \gamma^k r_{i+k+1}\]
 
-Lambda makes rewards (moves) that are further away less valuable.
+where $\gamma \in [0,1]$ is the \textit{discount rate} it makes rewards 
+further in the future lass valuable.
 
 \textbf{110. What is the average reward model, and what are its
 advantages and disadvantages?}
@@ -1850,18 +1617,9 @@ Process. If state and action sets are finite, it is a finite MDP. To
 define a finite MDP we need:
 
 \begin{itemize}
-\item
-  \begin{quote}
-  State and action sets
-  \end{quote}
-\item
-  \begin{quote}
-  One step ``dynamics'' defined by transition probabilities
-  \end{quote}
-\item
-  \begin{quote}
-  Reward probabilities
-  \end{quote}
+\item State and action sets
+\item One step ``dynamics'' defined by transition probabilities
+\item Reward probabilities
 \end{itemize}
 
 \textbf{113. What sort of learning simplifications does MDP allow in
@@ -1877,14 +1635,19 @@ state s' and giving the user a corresponding reward.
 \textbf{114. Describe the State-value function and action-value
 functions?}
 
-\textit{State-value function:} the value of a state is the expected
-return starting from that state, depends on the agents policy
+\textit{State-value function:} $V^\pi(s)$ returnes the expected
+revard starting from the state $s$ using policy $\pi$
+\[ V^\pi (s) = E_\pi \{ G_t | s_t = s \}\]
+where $G_t$ is total discounted reward from time step $t$.
 
-\textit{Action-value function:} the value of taking an action in a
-state under policy $\pi$ is the expected return starting from that state,
-taking that action and thereafter following $\pi$.
+\textit{Action-value function:} $Q^\pi (s, a)$ returnes the expected revard
+of taking an action $a$ in a state $s$ under policy $\pi$.
 
-\includegraphics[width=\columnwidth]{media/image8.png}
+\[ Q^\pi (s, a) = E_\pi \{ G_t | s_t = s, a_t = a\}\]
+
+The relationship between $Q$ and $V$:
+\[ V^\pi(s) = \sum_{a \in A} \pi(a | s) Q^\pi (s,a)\]
+
 
 \textbf{115. Describe the Bellman equations and their role in RL?}
 
@@ -1898,14 +1661,17 @@ action-value function?}
 
 For finite MDP's policies, they can be partially ordered:
 
-\includegraphics[width=\columnwidth]{media/image39.png}
+\[ \pi \geq \pi' \quad \iff \quad \forall s \in S : \ V^\pi (s) \geq V^{\pi'}(s)\]
 
 This means that there are always one or more policies that are better or
 equal to all the others. These are optimal policies. Optimal policies
 share the same state-value function and action-value function.
 
-\includegraphics[width=\columnwidth]{media/image9.png}
-
+\begin{align*}
+  V^*(s) &= \max_\pi V^\pi (s) \quad \forall s \in S \\
+  Q^*(s, a) &= \max_\pi Q^\pi (s, a) \quad \forall s \in S, a \in A(s)
+\end{align*}
+  
 Basically the optimal value function and the optimal action-value
 function return the expected return (reward) for following the optimal
 policy. This also means that they tell us what the optimal action in a
@@ -1917,13 +1683,16 @@ action-value function?}
 The value of a state under an optimal policy must equal the expected
 return for the best action from that state
 
-\includegraphics[width=\columnwidth]{media/image31.png}
+\begin{align*}
+  Q^*(s,a) &= E \left\{ r_{t+1} + \gamma \max_{a'} Q^* (s_{t+1}, a') | s_t = s, a_t = a \right\} \\
+   &= \sum_{s'} P_{ss'}^{a} \left[ R_{ss'}^a + \gamma \max_{a'} Q^*(s', a')\right]
+\end{align*}
 
-Q is the unique solution of this \emph{system of nonlinear equations}.
-Once we have Q* we can further calculate the optimal policy by taking
+$Q$ is the unique solution of this \emph{system of nonlinear equations}.
+Once we have $Q^*$ we can further calculate the optimal policy by taking
 the optimal action:
 
-\includegraphics[width=\columnwidth]{media/image28.png}
+\[ \pi^*(s) = \underset{a \in A(s)}{\text{argmax}}\ Q^*(s,a)\]
 
 \textbf{118. How to solve Bellman optimality equations?}
 
@@ -1931,18 +1700,9 @@ Finding an optimal policy by solving the Bellman optimality equation
 requires the following:
 
 \begin{itemize}
-\item
-  \begin{quote}
-  accurate knowledge of environment dynamics;
-  \end{quote}
-\item
-  \begin{quote}
-  enough space and time to do the computation;
-  \end{quote}
-\item
-  \begin{quote}
-  the Markov property must be true.
-  \end{quote}
+\item accurate knowledge of environment dynamics;
+\item enough space and time to do the computation;
+\item the Markov property must be true.
 \end{itemize}
 
 \^{} can be done with dynamic programming
@@ -1961,24 +1721,15 @@ V(policy), then improve policy based on that V(policy))
 \textbf{120. Describe policy-value iteration, value iteration, and
 policy iteration approaches to RL?}
 
-\textit{Policy iteration}: policy\_0 → V(policy\_0) → policy\_1 →
-V(policy\_1) → \ldots{}
-
-V(policy\_i) doesn't need to converge, just move policy towards best one
+\textit{Policy iteration}: $V(\pi_0) \to \pi_1,\ V(\pi_1) \to \pi_2,\ \dots$ \\
+$V(\pi_i)$ doesn't need to converge, just move towards the best one
 
 \textit{Value iteration}:
-
-\includegraphics[width=\columnwidth]{media/image34.png}
+\[ V_{k+1} (s) = \max_a \sum_{s'} P_{ss'}^a \left[ r_{ss'}^a + \gamma V_k(s') \right]\]
 
 \begin{itemize}
-\item
-  \begin{quote}
-  use Bellman optimality equation as an update
-  \end{quote}
-\item
-  \begin{quote}
-  Converges to V*
-  \end{quote}
+\item use Bellman optimality equation as an update
+\item Converges to $V^*$
 \end{itemize}
 
 \textbf{121. Describe the convergence criterion for value iteration.}
@@ -2003,31 +1754,10 @@ returns. So to estimate V(s) we average all observed returns in state s.
 \textbf{123. Describe the $\varepsilon$-greedy policy.}
 
 \begin{itemize}
-\item
-  \begin{quote}
-  with probability $1-\varepsilon$ perform the optimal/greedy action
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  with probability $\varepsilon$ perform a random action
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  will keep exploring the environment
-  \end{quote}
-\end{itemize}
-
-\begin{itemize}
-\item
-  \begin{quote}
-  slowly move it towards greedy policy: $\varepsilon \to 0$
-  \end{quote}
+\item with probability $1-\varepsilon$ perform the optimal/greedy action
+\item with probability $\varepsilon$ perform a random action
+\item will keep exploring the environment
+\item slowly move it towards greedy policy: $\varepsilon \to 0$
 \end{itemize}
 
 We use it in Q-learning as an ``explore'' method, because we can't
@@ -2037,36 +1767,25 @@ initially unreliable, we need to explore until optimal!)
 \textbf{124. Describe learning with time differences (TD) in RL?}
 
 Previous states receive a portion of the difference to successors.
-difficult for analysis
+(difficult for analysis)
 
-\includegraphics[width=\columnwidth]{media/image7.png}
+For $\lambda = 0$:
+\[ V(s_t) = V(s_t) + c \cdot \left(V(s_{t+1}) - V(s_t) \right)\]
 
-\begin{itemize}
-\item
-  \begin{quote}
-  c is a parameter, slowly decreasing during learning ensuring
-  convergence
-  \end{quote}
-\item
-  \begin{quote}
-  For lambda \textgreater{} 0, more than just immediate successors are
-  taken into account (speed)
-  \end{quote}
-\end{itemize}
+where $c$ is a parameter, slowly decreasing during learning ensuring convergence
+
+For $\lambda > 0$, more than just immediate successors are taken into account (speed)
 
 \textbf{125. Describe the Q-learning.}
 
-Works with Q function instead of V function.
+Works with $Q$ function instead of $V$ function.
 
-\begin{quote}
-Q(s, a) estimates the \textbf{discounted cumulative reward} (start in s,
+$Q(s, a)$ estimates the \textbf{discounted cumulative reward} (start in s,
 take action a, follow the current policy thereafter)
 
-Suppose we have the optimal Q function → optimal policy is argmax\_b
-Q(s, b)
+Suppose we have the optimal $Q$ function → optimal policy is $\text{argmax}_b\ Q(s, b)$
 
 \includegraphics[width=\columnwidth]{media/image3.png}
-\end{quote}
 
 Pseudo code:
 
@@ -2075,9 +1794,17 @@ Pseudo code:
 \textbf{126. What are the updates in Q-learning? How to assure
 exploration?}
 
-assure exploration → epsilon - greedy!
+Q-learning updates:
+\begin{itemize}
+  \item basic update equation:
+  \[ Q(s, a) \leftarrow r(s, a) + \max_b Q(s', b)\]
+  \item with a discount factor to give later rewards less impact:
+  \[ Q(s, a) \leftarrow r(s, a) + \gamma \max_b Q(s', b)\]
+  \item with a learning rate for non-deterministic worlds:
+  \[ Q(s, a) \leftarrow \big[ q-\alpha \big] Q(s, a) + \alpha \big[ r(s, a) + \gamma \max_b Q(s', b) \big] \]
+\end{itemize}
 
-\includegraphics[width=\columnwidth]{media/image4.png}
+Assure exploration: $\varepsilon$-greedy!
 
 \textbf{127. How to use function approximation in RL?}
 
