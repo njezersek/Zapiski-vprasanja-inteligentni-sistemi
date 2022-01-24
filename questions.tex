@@ -1,3 +1,5 @@
+\section{Nature-inspired computing}
+
 \textbf{1. Describe the main components of an evolutionary program:
 population representation, generation, selection, combination,
 replacement, and stopping criteria?}
@@ -11,6 +13,7 @@ random solution that can expand the search space.
 Stopping criteria: n generations, when no change in top x for n
 iterations, when no change in population for n iterations, resources
 (time), target fitness.
+
 
 \textbf{2. Describe when to use genetic algorithms?}
 
@@ -43,15 +46,15 @@ complexity
 \textbf{5. Describe terms from evolutionary computation such as
 population variability, fitness function, coevolution.}
 
-\underline{Fitness function}: is a function that takes a solution as
+\textit{Fitness function}: is a function that takes a solution as
 input and evaluates it, to see how ``good'' the solution is.
 
-\underline{Population variability}: we need to have a population that
+\textit{Population variability}: we need to have a population that
 encompasses as big a solution space as possible to find a solution close
 to the optimal as possible (eg. 2\^{}30 solution space, population of 10
 will probably not find a very good solution)
 
-\underline{Coevolution}: basically crossover =\textgreater{} two agents
+\textit{Coevolution}: basically crossover =\textgreater{} two agents
 affect evolution by combining traits.
 
 Was mentioned more in context of solving related problems together
@@ -60,63 +63,63 @@ Was mentioned more in context of solving related problems together
 them, and their strengths and weaknesses: bit and numeric vectors,
 strings, permutations, trees.}
 
-\underline{bit/numeric:} good for problems that can be represented with
+\textit{bit/numeric:} good for problems that can be represented with
 numbers, cannot represent very complex problems, eg. good for knapsack
 problem
 
-\underline{Strings:}
+\textit{Strings:}
 
-\underline{Permutations}: good for problems where we are looking for a
+\textit{Permutations}: good for problems where we are looking for a
 solution of a sequence of numbers (TSP), then we can use GA to ``learn''
 the best permutations
 
-\underline{Trees}: good for problems where we want to find the formula
+\textit{Trees}: good for problems where we want to find the formula
 for the solution (as formulas can be nicely represented with trees)
 
 \textbf{7. What are linear crossover, Gray coding \$of binary numbers,
 adaptive crossover, gaussian mutation, Lamarckian mutation, and elitism?
 What are their advantages compared to baselines?}
 
-\underline{Linear crossover:} takes a linear combination of the two
+\textit{Linear crossover:} takes a linear combination of the two
 individuals, have a ``probability'' for each bit in each agent and take
 each bit with probability p from agent 1 and with probability (1-p) from
 agent 2
 
-\underline{Gray coding:} Encode binary numbers in such a way that
+\textit{Gray coding:} Encode binary numbers in such a way that
 incrementing a number by 1 takes only 1 bit change (Sth like this: Order
 binary representations of numbers in such a way that the next number is
 only one bit changed: 0 - 1 - 11 - 10 - 110 - ...)
 
-\underline{Adaptive crossover:} Use bit templates for crossover (1-first
+\textit{Adaptive crossover:} Use bit templates for crossover (1-first
 parent, 0-second parent). Learn which templates work best
 
-\underline{Gaussian mutation:} Mutate by adding a Gaussian error to the
+\textit{Gaussian mutation:} Mutate by adding a Gaussian error to the
 mutation
 
-\underline{Lamarckian mutation:} search for locally best mutation
+\textit{Lamarckian mutation:} search for locally best mutation
 
-\underline{Elitism:} choose n of the best solutions in population and
+\textit{Elitism:} choose n of the best solutions in population and
 keep them for the next population
 
 \textbf{8. Describe the following evolutionary models: proportional and
 rank proportional roulette wheel, tournaments, single tournament, and
 stochastic universal sampling?}
 
-\underline{Tournaments:} have agents ``battle'' each other, by assigning
+\textit{Tournaments:} have agents ``battle'' each other, by assigning
 them probabilities according to their fitness values. Best solution
 =\textgreater{} best probability of winning.
 
-\underline{Proportional:} Assign each agent a probability according to
+\textit{Proportional:} Assign each agent a probability according to
 their fitness value. Use randomly generated numbers to select agents.
 
-\underline{Rank proportional:} Assign each agent probability according
+\textit{Rank proportional:} Assign each agent probability according
 to their rank of fitness value.
 
-\underline{Single tournament:} randomly split population into small
+\textit{Single tournament:} randomly split population into small
 groups and apply crossover to two best agents from each group, their
 offspring replace the two worst agents from the group
 
-\underline{Stochastic:} F = sum(all fitness values), N = size of
+\textit{Stochastic:} F = sum(all fitness values), N = size of
 population we want. Make a F/N interval. Assign part of the interval to
 each agent according to fitness values. Use RNG to generate numbers, if
 generated number is within an interval of some agent =\textgreater{}
@@ -151,10 +154,10 @@ what is Pareto optimal solution?}
 
 Use fitness functions with different objectives and try to improve them.
 
-\underline{Pareto}: we cannot improve conflicting criteria without
+\textit{Pareto}: we cannot improve conflicting criteria without
 getting worse on others
 
-\href{https://en.wikipedia.org/wiki/Multi-objective_optimization}{\underline{https://en.wikipedia.org/wiki/Multi-objective\_optimization}}
+\href{https://en.wikipedia.org/wiki/Multi-objective_optimization}{\textit{https://en.wikipedia.org/wiki/Multi-objective\_optimization}}
 
 \textbf{14. Explain the main problems of genetic programming.}
 
@@ -164,7 +167,7 @@ execution can change the environment which changes fitness function,
 calculating fitness function with simulation takes a lot of time.
 
 \hypertarget{machine-learning-ml}{%
-\section{\texorpdfstring{\underline{Machine learning
+\section{\texorpdfstring{\textit{Machine learning
 (ML)}}{Machine learning (ML)}}\label{machine-learning-ml}}
 
 Try to estimate f(X) so we can get the most accurate Y to the actual
@@ -175,10 +178,10 @@ result.
 \textbf{15. Describe the two main goals of ML, prediction and inference,
 and explain why they are sometimes in contradiction.}
 
-\underline{Prediction}: if we can make a good estimate, then we can make
+\textit{Prediction}: if we can make a good estimate, then we can make
 accurate predictions for the response (Y) based on X
 
-\underline{Inference:} we are interested in the type of relationship
+\textit{Inference:} we are interested in the type of relationship
 between Y and X, model interpretability is essential for inference.
 
 If we want good accuracy (prediction), we might need a much more
@@ -188,20 +191,20 @@ But it can also happen that some complicated model gives us bad results
 
 \textbf{16. What parametric and non-parametric ML methods exist?}
 
-\underline{Parametric methods}: Logistic regression, Naive bayes, simple
+\textit{Parametric methods}: Logistic regression, Naive bayes, simple
 neural networks
 
-\underline{Non-parametric methods}: kNN, decision trees, SVM
+\textit{Non-parametric methods}: kNN, decision trees, SVM
 
 \textbf{17. Describe the main characteristics of supervised,
 unsupervised, and semi-supervised ML methods?}
 
-\underline{Supervised learning:} both X and Y are observed
+\textit{Supervised learning:} both X and Y are observed
 
-\underline{Unsupervised:} only X are observed, we need to use X to guess
+\textit{Unsupervised:} only X are observed, we need to use X to guess
 what Y would have been and build a model from there
 
-\underline{Semi-supervised}: only a small sample of labelled instances
+\textit{Semi-supervised}: only a small sample of labelled instances
 are observed but a large set of unlabeled instances
 
 \textbf{18. What is the difference between regression and
@@ -216,10 +219,10 @@ is this email spam or not, will it be cloudy, rainy or sunny)
 \textbf{19. What are association rules, and how they differ from
 decision rules?}
 
-\underline{Association rules} are rules that tell us how some ``event''
+\textit{Association rules} are rules that tell us how some ``event''
 is associated with another (how some X is associated with some Y).
 
-\underline{A decision rule} is a simple IF-THEN statement consisting of
+\textit{A decision rule} is a simple IF-THEN statement consisting of
 a condition and a prediction.
 
 \textbf{20. What are outliers in ML?}
@@ -241,18 +244,18 @@ Search: find parameters that describe our f(X) = y best
 \textbf{22. Describe different properties of ML models: bias, variance,
 generalization, hypothesis language.}
 
-\underline{Bias} refers to the error that is introduced by modeling a
+\textit{Bias} refers to the error that is introduced by modeling a
 real life problem by a much simpler problem. The more flexible/complex a
 method is, the \textbf{less} bias it will have
 
-\underline{Variance} refers to how much your estimate for f would change
+\textit{Variance} refers to how much your estimate for f would change
 if you had a different training data set. The more flexible the method
 is, the \textbf{more} variance it has.
 
-\underline{Generalization} describes how well our method works on new
+\textit{Generalization} describes how well our method works on new
 unseen data (aka test data).
 
-\underline{Hypothesis language} describes the hypotheses which machine
+\textit{Hypothesis language} describes the hypotheses which machine
 learning system outputs
 
 \textbf{23. What is the bias-variance trade-off in ML?}
@@ -302,7 +305,7 @@ k-means.}
 \begin{itemize}
 \item
   \begin{quote}
-  \underline{k-d} trees are a generalization of BST, where each node
+  \textit{k-d} trees are a generalization of BST, where each node
   holds a vector instead of a single value. Before building a tree we
   must normalize values to the interval {[}0,1{]}, and we split each
   node on dimension so that we maximize variance in that dimension, and
@@ -311,25 +314,25 @@ k-means.}
   \end{quote}
 \item
   \begin{quote}
-  \underline{R-trees} are similar to k-d trees but are generalization of
+  \textit{R-trees} are similar to k-d trees but are generalization of
   B-trees.
   \end{quote}
 \item
   \begin{quote}
-  \underline{RKD-trees} are multiple trees where we split on random
+  \textit{RKD-trees} are multiple trees where we split on random
   dimensions from a set of dimensions with highest variance. If the
   probability of not finding nearest neighbor in the single tree is p
   then with m trees is p\^{}m
   \end{quote}
 \item
   \begin{quote}
-  \underline{Local sensitive hashing}: we have multiple hash tables with
+  \textit{Local sensitive hashing}: we have multiple hash tables with
   multiple hash functions, near instances are also near when hashed
   (hashing with random hyperplanes)
   \end{quote}
 \item
   \begin{quote}
-  \underline{Hierarchical k-means}: recursively run k-means clustering,
+  \textit{Hierarchical k-means}: recursively run k-means clustering,
   until clusters are small enough
   \end{quote}
 \end{itemize}
@@ -347,35 +350,35 @@ prediction value P(Y=y\textbar X=x0)
 rules, bagging, boosting, random forests, stacking, AODE, MARS, SVM,
 neural networks.}
 
-\underline{kNN:} represent the data in a 2D/3D\ldots{} space and compute
+\textit{kNN:} represent the data in a 2D/3D\ldots{} space and compute
 distances between different data samples, use these distances to find
 the k nearest neighbors to our input x0 and classify x0 as the majority
 class of these k instances.
 
-\underline{Decision rules}: is a function which maps an observation to
+\textit{Decision rules}: is a function which maps an observation to
 an appropriate action.
 
-\underline{Bagging:} make different bags for each classifier and put
+\textit{Bagging:} make different bags for each classifier and put
 data samples in them, classify new data sample by comparing it to the
 samples in the bags
 
-\underline{Boosting}: grows tree sequentially =\textgreater{} each tree
+\textit{Boosting}: grows tree sequentially =\textgreater{} each tree
 uses information about errors of previous trees, weak learners ensemble
 
-\underline{Random forests}: build an number of decision trees on
+\textit{Random forests}: build an number of decision trees on
 bootstrapped training sample, but when building these trees, each time a
 split in a tree is considered, a random sample of m predictors is chosen
 as split candidates form the full set of p
 predictors\includegraphics[width=3.42406in,height=2.00895in]{media/image35.png}
 
-\underline{Stacking:} Predictions of base learners are used as input for
+\textit{Stacking:} Predictions of base learners are used as input for
 meta learner (shitty neural networks).
 
 Method to combine heterogeneous predictors.
 
 Predictions of base learners are used as input for meta learner.
 
-\underline{MARS}: Multivariate Adaptive Regression Splines
+\textit{MARS}: Multivariate Adaptive Regression Splines
 
 Generalization of stepwise Linear regression.
 
@@ -388,7 +391,7 @@ regression} technique and can be seen as an extension of
 \href{https://en.wikipedia.org/wiki/Linear_model}{linear models} that
 automatically models nonlinearities and interactions between variables.
 
-\underline{AODE:} Average One-Dependence Estimator
+\textit{AODE:} Average One-Dependence Estimator
 
 ensemble of SPODE classifiers (Super-Parent One Dependence Estimator --
 Naive Bayes where attributes are dependent on class and one more
@@ -405,11 +408,11 @@ probabilistic
 learning} technique. It was developed to address the
 attribute-independence problem of the naive bayes classifier.
 
-\underline{SVM:} Support Vector Machine =\textgreater{} constructs a
+\textit{SVM:} Support Vector Machine =\textgreater{} constructs a
 hyperplane or set of hyperplanes in a high dimensional space which can
 be used for classification or regression.
 
-\underline{Neural networks}: use layers of neurons to compute the
+\textit{Neural networks}: use layers of neurons to compute the
 result, neurons are connected with edges that have weights, these
 weights are used to represent the importance of one neuron's output for
 another neuron's input. Use backpropagation to learn these weights.
@@ -430,26 +433,26 @@ cross-validation. Describe different biases of ML models stemming from
 data: reporting bias, automation bias, selection bias, group attribution
 bias, implicit bias.}
 
-\underline{Cross-validation}: when we don't have enough data to split
+\textit{Cross-validation}: when we don't have enough data to split
 (or we don't want to split), we make k splits and build a model for each
 subset and test it on remaining data. Every instance is used for testing
 once and we get a general idea of model accuracy on that data.
 
-\underline{Reporting bias:} frequency of data is not real world
+\textit{Reporting bias:} frequency of data is not real world
 frequency (people review only if they have extreme opinions \ldots)
 
-\underline{Automation bias:} model is actually not better than human
+\textit{Automation bias:} model is actually not better than human
 performance (but you love ML and you want to use it \ldots)
 
-\underline{Selection bias:} data sets are not representatively selected
+\textit{Selection bias:} data sets are not representatively selected
 (interview only friends and family, even selecting complete strangers we
 have some bias in selection)
 
-\underline{Group attribution bias:} is a tendency to generalize what is
+\textit{Group attribution bias:} is a tendency to generalize what is
 true of individuals to an entire group to which they belong. (you went
 to FRI and generalize that all are good students \ldots{} )
 
-\underline{Implicit bias:} occurs when assumptions are made based on
+\textit{Implicit bias:} occurs when assumptions are made based on
 one's own mental models and
 
 personal experiences that do not necessarily apply more generally. (i
@@ -470,33 +473,33 @@ There cannot be a single best algorithm for every ML situation.
 wrapper, and embedded methods. What are the main differences between
 them?}
 
-\underline{Filter methods}: independent of learning algorithm, select
+\textit{Filter methods}: independent of learning algorithm, select
 the most discriminative features through a criterion based on the
 character of data (information gain, ReliefF)
 
-\underline{Wrapper:} use the intended learning algorithm to evaluate the
+\textit{Wrapper:} use the intended learning algorithm to evaluate the
 features (eg. progressively add features to SVM while performance
 increases)
 
-\underline{Embedded}: select features in the process of learning (ridge,
+\textit{Embedded}: select features in the process of learning (ridge,
 lasso)
 
-\href{https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/}{\underline{https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/}}
+\href{https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/}{\textit{https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/}}
 
 \textbf{33. Describe the difference between impurity based and
 context-sensitive attribute evaluation.}
 
-\underline{Impurity based}: assume \emph{conditional independence
+\textit{Impurity based}: assume \emph{conditional independence
 between the attributes} (information gain, Gini index, MDL, distance
 measure, MSE, MAE (mean absolute error))
 
-\underline{Context sensitive measures:} contrary (Relief, Contextual
+\textit{Context sensitive measures:} contrary (Relief, Contextual
 Merit). Random forest or boosting based attribute evaluation.
 
 \textbf{34. Describe the main ideas of information gain and ReliefF
 evaluation measure.}
 
-\underline{Information gain}: measure (im)purity (entropy) of labels
+\textit{Information gain}: measure (im)purity (entropy) of labels
 before and after the split
 
 IG(A) = H(T) - H(T\textbar A).\\
@@ -506,7 +509,7 @@ H(T\textbar A) \ldots{} conditional entropy
 
 Assumes attributes are independent.
 
-\underline{ReliefF:} criterion: evaluate attribute according to its
+\textit{ReliefF:} criterion: evaluate attribute according to its
 power of separation between near instances. Increases/decreases worth of
 feature(s) when comparing the (dis)similarity between random nearby
 examples (based on certain attribute). Nearest k hits.
@@ -523,11 +526,11 @@ linear regression) will be set to 0 if they are useless \ldots{}
 \textbf{36. Describe ridge regression (L2) and lasso (L1) and the
 difference between them?}
 
-\href{https://towardsdatascience.com/l1-and-l2-regularization-methods-ce25e7fc831c}{\underline{https://towardsdatascience.com/l1-and-l2-regularization-methods-ce25e7fc831c}}
+\href{https://towardsdatascience.com/l1-and-l2-regularization-methods-ce25e7fc831c}{\textit{https://towardsdatascience.com/l1-and-l2-regularization-methods-ce25e7fc831c}}
 
 The key difference between them is the penalty term.
 
-\underline{Lasso → L1} type regularization, which means that it does not
+\textit{Lasso → L1} type regularization, which means that it does not
 square the size of the attribute parameter. It only sums up the sizes
 and adds it to the error estimation. It will automatically converge
 these parameters to zero, if they don't contribute to the prediction.
@@ -535,7 +538,7 @@ these parameters to zero, if they don't contribute to the prediction.
 In other words, if the parameter does not contribute to the prediction,
 it will be set to 0.
 
-\underline{Ridge → L2} regularization, sum of square of parameters is
+\textit{Ridge → L2} regularization, sum of square of parameters is
 added to error estimation (e.g. to RMSE). This is called penalty and is
 weighted (in L1 also) with the lambda parameter. We don't want our
 parameters to be huge because that leads to overfitting to train data.
@@ -573,26 +576,26 @@ observed to be negative
 \textbf{39. Describe ROC curves, sensitivity, specificity, precision,
 recall, F-measure, classification accuracy, mean squared error.}
 
-\underline{Classification accuracy:} (TP + TN)/(TP + TN + FP + FN)
+\textit{Classification accuracy:} (TP + TN)/(TP + TN + FP + FN)
 =\textgreater{} how accurate is the model
 
-\underline{Precision:} TP / (TP + FP) =\textgreater{} what \% of tuples
+\textit{Precision:} TP / (TP + FP) =\textgreater{} what \% of tuples
 that the classifier labeled as positive are actually positive
 
-\underline{Recall:} TP / (TP + FN) =\textgreater{} what \% of positive
+\textit{Recall:} TP / (TP + FN) =\textgreater{} what \% of positive
 tuples did the classifier label as positive
 
-\underline{sensitivity} : TP/P =\textgreater{} true positive recognition
+\textit{sensitivity} : TP/P =\textgreater{} true positive recognition
 rate
 
-\underline{Specificity:} TN/N =\textgreater{} true negative recognition
+\textit{Specificity:} TN/N =\textgreater{} true negative recognition
 rate
 
-\underline{ROC curve:} shows both y=TP and x=FP rate simultaneously, to
+\textit{ROC curve:} shows both y=TP and x=FP rate simultaneously, to
 summarize overall performance we also use area under the ROC curve
 (AUC), the larger AUC is, better the classifier
 
-\underline{F-measure:} =\textgreater{} harmonic mean of precision and
+\textit{F-measure:} =\textgreater{} harmonic mean of precision and
 recall
 
 \includegraphics[width=2.42708in,height=0.90625in]{media/image12.png}where
@@ -602,12 +605,12 @@ predicted\includegraphics[width=3.55208in,height=0.66667in]{media/image38.png}
 \textbf{40. What are the ideas of unsupervised and semi-supervised
 feature selection?}
 
-\underline{Semi-supervised:} Typically a small sample of labelled and a
+\textit{Semi-supervised:} Typically a small sample of labelled and a
 large sample of unlabeled data is available. Use the label information
 of labeled data and data distribution or local structure of both labeled
 and unlabeled data to evaluate feature relevance
 
-\underline{Unsupervised:} criterion: preserve similarity between
+\textit{Unsupervised:} criterion: preserve similarity between
 instances.
 
 eigenvalues of L (\emph{laplacian matrix}) measure the separability of
@@ -631,7 +634,7 @@ We can use an ensemble approach to:
 \textbf{42. Describe the main ideas of multi-view, multi-label, and
 multitask learning.}
 
-\underline{Multi-view:} information from different sources, some
+\textit{Multi-view:} information from different sources, some
 measurements are irrelevant, noisy or conflicting. Different views
 typically provide complementary information.
 
@@ -657,7 +660,7 @@ Approaches:
   \end{quote}
 \end{itemize}
 
-\underline{Multi-Label:} Each instance may have more than one label
+\textit{Multi-Label:} Each instance may have more than one label
 
 Approaches:
 
@@ -676,17 +679,17 @@ Approaches:
   \end{quote}
 \end{itemize}
 
-\underline{Multitask:} learn several related tasks simultaneously with
+\textit{Multitask:} learn several related tasks simultaneously with
 the same model. They share knowledge representation. Prevents
 overfitting.
 
 \textbf{43. What do online learning and online feature selection mean?}
 
-\underline{Online feature selection}: in data stream scenario, instances
+\textit{Online feature selection}: in data stream scenario, instances
 arrive sequentially, potentially the learned concept changes, new
 features may appear
 
-\underline{Online learning}: same as above but for learning
+\textit{Online learning}: same as above but for learning
 
 \textbf{44. Explain the main ideas of ensemble methods in ML, why and
 when they work?}
@@ -762,11 +765,11 @@ similarity score, average over all trees gives \emph{similarity measure}
 \textbf{48. Describe the main parameters of random forests and
 boosting?}
 
-\underline{Boosting}: B=number of trees, \textcrlambda=the shrinkage parameter, a
+\textit{Boosting}: B=number of trees, \textcrlambda=the shrinkage parameter, a
 small positive number(small \textcrlambda requires large B to work well), d=number
 of splits in each tree
 
-\underline{RF}: B=number of trees, m = number of features to subsample
+\textit{RF}: B=number of trees, m = number of features to subsample
 for every split
 
 \textbf{49. Describe the main idea of} \textbf{gradient boosting?}
@@ -778,7 +781,7 @@ builds the model in a stage-wise fashion like other boosting methods do
 and it generalizes them by allowing optimization of an arbitrary
 differentiable loss function.
 
-\href{https://corporatefinanceinstitute.com/resources/knowledge/other/gradient-boosting/}{\underline{Gradient
+\href{https://corporatefinanceinstitute.com/resources/knowledge/other/gradient-boosting/}{\textit{Gradient
 Boosting - Overview, Tree Sizes,
 Regularization}}\includegraphics[width=2.60938in,height=2.32109in]{media/image33.png}
 
@@ -797,12 +800,12 @@ that the sum of all errors * 1/C will be smaller than some con7stant.
 \textbf{51. What is the purpose of different kernels (linear,
 polynomial, RBF) in SVM?}
 
-\underline{Linear:} trivial
+\textit{Linear:} trivial
 
-\underline{Polynomial}: we allow SVM to produce a non-linear decision
+\textit{Polynomial}: we allow SVM to produce a non-linear decision
 boundary.
 
-\underline{Radial basis function (RBF):}
+\textit{Radial basis function (RBF):}
 
 \includegraphics[width=3.33333in,height=0.84375in]{media/image30.png}
 
@@ -814,10 +817,10 @@ interpretation as a \emph{similarity measure}
 
 \textbf{52. Describe how to use SVM for more than two classes?}
 
-\underline{One versus All}: build k different models (k=number of
+\textit{One versus All}: build k different models (k=number of
 classes) and classify an example to the class that gives highest
 probability.\\
-\underline{One versus One}: fit (k 2) models (every possible pair) and
+\textit{One versus One}: fit (k 2) models (every possible pair) and
 classify to the class that wins most pairwise competitions.
 
 Choose 1v1 if k is small enough.
@@ -828,14 +831,14 @@ Choose 1v1 if k is small enough.
 Activation functions are mathematical equations that determine the
 output of a neural network.
 
-\underline{Step functions:} \emph{f(x) = 1 if x \textgreater{} 0 else 0}
+\textit{Step functions:} \emph{f(x) = 1 if x \textgreater{} 0 else 0}
 
-\underline{ReLU (Rectified Linear Unit):} \emph{f(x) = max(0, x)}
+\textit{ReLU (Rectified Linear Unit):} \emph{f(x) = max(0, x)}
 
-\underline{Sigmoid function} →
+\textit{Sigmoid function} →
 \includegraphics[width=0.99219in,height=0.37256in]{media/image11.png}
 
-\underline{Softplus:} \emph{f(x) = ln(1+e\^{}x)} \ldots{} approximation
+\textit{Softplus:} \emph{f(x) = ln(1+e\^{}x)} \ldots{} approximation
 of ReLU
 
 \textbf{54. Describe the main idea of backpropagation learning for NNs.}
@@ -856,7 +859,7 @@ of ReLU
   \end{quote}
 \end{itemize}
 
-\href{https://www.youtube.com/watch?v=Ilg3gGewQ5U}{\underline{What is
+\href{https://www.youtube.com/watch?v=Ilg3gGewQ5U}{\textit{What is
 backpropagation really doing? \textbar{} Deep learning, chapter 3}}
 
 \textbf{55. Describe the role of criterion (loss) function in
@@ -870,12 +873,12 @@ made mistakes. We frequently use cross entropy as cost function C.
 
 \textbf{56. Describe the strengths and weaknesses of NN?}
 
-\underline{Weaknesses:} long training time, require a number of
+\textit{Weaknesses:} long training time, require a number of
 parameters determined empirically, poor interpretability, overfitting is
 a usual, gradient based BP we have no guarantee of reaching the global
 optimum.
 
-\underline{Strengths:} high tolerance to noisy data, ability to classify
+\textit{Strengths:} high tolerance to noisy data, ability to classify
 untrained patterns, well suited for continuous valued inputs and
 outputs, algorithms are inherently parallel, successful on an array of
 real-world data. Can closely approximate any function.
@@ -883,25 +886,25 @@ real-world data. Can closely approximate any function.
 \textbf{57. Describe a few techniques for overfitting prevention in
 NNs.}
 
-\underline{Weight decay}: over time if weights haven't been updated in a
+\textit{Weight decay}: over time if weights haven't been updated in a
 while, slowly decrement them and set them to 0.
 
-\underline{Weight sharin}g: not all connections have unique weights,
+\textit{Weight sharin}g: not all connections have unique weights,
 they are shared among connections.
 
-\underline{Early stopping:} stop before we reach a too high
+\textit{Early stopping:} stop before we reach a too high
 classification accuracy. Need a separate evaluation set.
 
-\underline{Model averaging}: train multiple models and average the
+\textit{Model averaging}: train multiple models and average the
 weights to use on the final model. ``Ensembling'' (not a good option
 -\textgreater{} even 1 NN takes a lot of time to train)
 
-\underline{Drop out:} randomly (with some probability) drop a node, when
+\textit{Drop out:} randomly (with some probability) drop a node, when
 training.
 
-\underline{Generative pre-training:} \ldots{}
+\textit{Generative pre-training:} \ldots{}
 
-\underline{Bayesian fitting:} not useable, too slow, complex
+\textit{Bayesian fitting:} not useable, too slow, complex
 
 \textbf{58. What are deep neural networks? What are their main strengths
 and weaknesses?}
@@ -943,7 +946,7 @@ Not fully connected -\textgreater{} lighter model
 
 \textbf{61. Describe different components of CNNs.}
 
-\underline{Convolutional layer:} The convolutional layer consists of a
+\textit{Convolutional layer:} The convolutional layer consists of a
 set of filters. (Each filter covers a spatially small portion of the
 input data). The network will learn filters that activate when they see
 some specific type of feature at some spatial position in the input.
@@ -952,7 +955,7 @@ Convolving the filter == dot product between filter and the input.
 
 On this layer we have local connectivity and shared weights.
 
-\underline{Pooling layer:} Progressively reduce the spatial size of the
+\textit{Pooling layer:} Progressively reduce the spatial size of the
 representation to reduce the amount of parameters and computation in the
 network. Speeds up learning and reduces overfitting.
 
@@ -965,13 +968,13 @@ location of the recognized pattern. E.g. nose on the forehead.
 
 \textbf{62. What are the advantages and disadvantages of CNNs?}
 
-\underline{Advantages:} automatically detects important features without
+\textit{Advantages:} automatically detects important features without
 human supervision, lighter model (not fully connected layers
 -\textgreater{} less weights), free translation of variance, fewer
 parameters take less space -\textgreater{} can be computed in a memory
 of a GPU (or across CPUs).
 
-\underline{Disadvantages:} high computational cost, need a lot of
+\textit{Disadvantages:} high computational cost, need a lot of
 training data!
 
 \textbf{63. What is 1d and 2d convolution?}
@@ -1024,34 +1027,34 @@ predictions.}
 
 (( this one might be wrong, not sure ))
 
-\underline{Domain level:} try to explain the ``true causes and
+\textit{Domain level:} try to explain the ``true causes and
 effects''. Usually unreachable except for artificial problems with known
 relations (if we can test it with result functions).
 
 Not applicable especially in medicine, business...
 
-\underline{Model-based:} Make the prediction process of a particular
+\textit{Model-based:} Make the prediction process of a particular
 model transparent. Better models enable better explanation at the domain
 level.
 
-\underline{Instance-level:} explain predictions for each instance
+\textit{Instance-level:} explain predictions for each instance
 separately (model-based). \emph{Nomograms}
 
 (For titanic, we would have a separate nomogram for each person. We
 average them at the end)
 
-\underline{Model-level:} the overall picture of a problem the model
+\textit{Model-level:} the overall picture of a problem the model
 conveys (model-based). Averaged instance-level models.
 
-\underline{Model agnostic:} Can be applied to any model. change one
+\textit{Model agnostic:} Can be applied to any model. change one
 input to our black box and see if the output changes significantly. This
 means that that input is important. (perturbation-based explanation).
 
 Won't work well for images. For that we use:
 
-\underline{Model-specific explanation technique}
+\textit{Model-specific explanation technique}
 
-\underline{Method EXPLAIN}: Hide one attribute at a time.
+\textit{Method EXPLAIN}: Hide one attribute at a time.
 
 Weakness: there might be 2 attributes needed to be absent at the same
 time to see the importance of the 3rd.
@@ -1076,12 +1079,12 @@ model-based explanations?}
 Model based tries to paint the whole picture, while instance based only
 explains the instances separately
 
-\underline{Model based}: Make the prediction process transparent of a
+\textit{Model based}: Make the prediction process transparent of a
 particular model. Explanation is independent of the accuracy of a model.
 ← this is what knowledge extractors are interested in (the overall
 picture of a problem the model conveys).
 
-\underline{Instance based}: Explain predictions for each instance
+\textit{Instance based}: Explain predictions for each instance
 separately (presentation format: impact of each feature on the
 prediction value). ← this is what practitioners applying models are
 interested in.
@@ -1089,7 +1092,7 @@ interested in.
 \textbf{72. Explain the main idea of the IME, LIME, and SHAP explanation
 technique?}
 
-\underline{IME:} Interactions-based Method for Explanation, the feature
+\textit{IME:} Interactions-based Method for Explanation, the feature
 gets some credit for standalone contributions and for contributions in
 interactions\includegraphics[width=3.46576in,height=1.98044in]{media/image21.png}
 
@@ -1115,7 +1118,7 @@ interactions\includegraphics[width=3.46576in,height=1.98044in]{media/image21.png
   \end{quote}
 \end{itemize}
 
-\underline{LIME:} Local Interpretable Model-agnostic Explanations,
+\textit{LIME:} Local Interpretable Model-agnostic Explanations,
 perturbations in the locality of an explained
 instance.\includegraphics[width=2.27342in,height=1.27262in]{media/image25.png}
 
@@ -1148,14 +1151,14 @@ instance.\includegraphics[width=2.27342in,height=1.27262in]{media/image25.png}
   \end{quote}
 \end{itemize}
 
-\underline{SHAP:} SHapley Additive exPlanation, unification of several
+\textit{SHAP:} SHapley Additive exPlanation, unification of several
 explanation methods, including IME and LIME
 
 (faster than IME but still uses linear model with all its strengths and
 weaknesses)
 
 \hypertarget{natural-language-processing-nlp}{%
-\section{\texorpdfstring{\underline{Natural language processing
+\section{\texorpdfstring{\textit{Natural language processing
 (NLP)}}{Natural language processing (NLP)}}\label{natural-language-processing-nlp}}
 
 \textbf{73. What is the Turing test?}
@@ -1173,24 +1176,24 @@ process data.
 
 \textbf{75. Describe the stages of linguistic analysis?}
 
-\underline{Prosody:} the patterns of stress and intonation in a language
+\textit{Prosody:} the patterns of stress and intonation in a language
 
-\underline{Phonology}: systems of sounds and relationships among the
+\textit{Phonology}: systems of sounds and relationships among the
 speech sounds that constitute the fundamental components of a language
 
-\underline{Morphology}: the amissible arrangement of sounds in words:
+\textit{Morphology}: the amissible arrangement of sounds in words:
 how to form words, prefixes and suffixes
 
-\underline{Syntax}: the arrangement of words and phrases to create
+\textit{Syntax}: the arrangement of words and phrases to create
 well-formed sentences in a language
 
-\underline{Semantics}: the meaning of a word, phrase, sentence or text
+\textit{Semantics}: the meaning of a word, phrase, sentence or text
 
-\underline{Pragmatics}: language in use and the context in which it is
+\textit{Pragmatics}: language in use and the context in which it is
 used, including such matters as deixis, taking turns in conversation,
 text organization, presupposition and implicature
 
-\underline{Knowing the world}: knowledge of the physical world, humans,
+\textit{Knowing the world}: knowledge of the physical world, humans,
 society, intentions in communications
 
 \textbf{76. Describe how to preprocess text in text mining.}
@@ -1225,23 +1228,23 @@ society, intentions in communications
 \textbf{77. Describe lemmatization, stemming, POS tagging, dependency
 parsing, and named entity recognition.}
 
-\underline{Lemmatization}: the process of grouping together the
+\textit{Lemmatization}: the process of grouping together the
 different inflected forms of a word so they can be analyzed as a single
 item
 
-\underline{Stemming}: reduce the words to their root ``state'' (it is
+\textit{Stemming}: reduce the words to their root ``state'' (it is
 getting out of use.)
 
-\href{https://blog.bitext.com/what-is-the-difference-between-stemming-and-lemmatization/}{\underline{https://blog.bitext.com/what-is-the-difference-between-stemming-and-lemmatization/}}
+\href{https://blog.bitext.com/what-is-the-difference-between-stemming-and-lemmatization/}{\textit{https://blog.bitext.com/what-is-the-difference-between-stemming-and-lemmatization/}}
 
-\underline{POS tagging}: assigning the correct part of speech (noun,
+\textit{POS tagging}: assigning the correct part of speech (noun,
 verb, subject, object,...) to words
 
-\underline{Named entity recognition:} seeks to locate and classify named
+\textit{Named entity recognition:} seeks to locate and classify named
 entities mentioned in unstructured text into predefined categories such
 as person names, organizations, locations, medical codes,...
 
-\underline{Dependency parsing}: find connections (dependencies) between
+\textit{Dependency parsing}: find connections (dependencies) between
 words
 
 \textbf{78. Describe the basic language resources for English and
@@ -1283,7 +1286,7 @@ WordNet is a database composed of synsets (cognitive synonyms):
   \end{quote}
 \end{enumerate}
 
-\href{https://wordnet.princeton.edu/}{\underline{https://wordnet.princeton.edu/}}
+\href{https://wordnet.princeton.edu/}{\textit{https://wordnet.princeton.edu/}}
 (maybe this will help)
 
 WordNet® is a large lexical database of English. Nouns, verbs,
@@ -1293,7 +1296,7 @@ by means of conceptual-semantic and lexical relations.
 
 \textbf{80. Describe approaches to document retrieval.}
 
-Historically people \underline{used keywords,} but \underline{today
+Historically people \textit{used keywords,} but \textit{today
 \emph{full text search}} is used (by the help of organized databases,
 indexing and good searching algorithms)
 
@@ -1311,36 +1314,36 @@ location of the word in the document.
 \textbf{82. Compare search with logical operators and ranking based
 search.}
 
-Search with \underline{logical operators} is outdated. It returns a lot
+Search with \textit{logical operators} is outdated. It returns a lot
 of results, we need to write large queries, synonyms are a problem,
 there is no partial matching and no weighting.
 
-\underline{Ranking based search} is used nowadays for web search (Yahoo,
+\textit{Ranking based search} is used nowadays for web search (Yahoo,
 Google, Bing, ...). Less frequent terms are more informative. It uses
 vector based representation of documents and queries. For ranking based
 search we can explain what bag-of-words approach is or dense embeddings.
 
 \textbf{83. Describe one-hot-encoding and bag-of-words representation.}
 
-\underline{One-hot-encoding} is the vector representation that consists
+\textit{One-hot-encoding} is the vector representation that consists
 of only 1 bit set to 1 and all other bits to 0. It assures that machine
 learning does not assume that higher numbers are more important.
 
-\underline{Bag of words} representation is commonly used in NLP, where a
+\textit{Bag of words} representation is commonly used in NLP, where a
 text or a document is represented as the bag of its words and how many
 times every word appears.
 
 \textbf{84. Describe how to use term-document and term-term matrix?}
 
-\underline{Term-document matrix} is the matrix where every line is one
+\textit{Term-document matrix} is the matrix where every line is one
 term and the columns are the documents. Every cell of the matrix shows
 how many times some term appeared in a document. This matrix is used for
 \textbf{comparison of terms}.
 
-\underline{Document-term matrix} is the other way around, (basically
+\textit{Document-term matrix} is the other way around, (basically
 transposed TDM) and it is used for \textbf{comparison of documents}.
 
-\underline{Term-term} matrix is a matrix where every line is one term
+\textit{Term-term} matrix is a matrix where every line is one term
 and every column is one term. If two terms appear together more often
 they have a higher score in the matrix.
 
@@ -1351,9 +1354,9 @@ Word Embeddings are dense representations of the individual words in a
 text, taking into account the context and other surrounding words that
 that individual word occurs with.
 
-\underline{Sparse embeddings:} SVD
+\textit{Sparse embeddings:} SVD
 
-\underline{Dense embeddings} are the ones that have less dimension, less
+\textit{Dense embeddings} are the ones that have less dimension, less
 space, they capture synonyms better, and reduce noise. We use LSA
 (latent semantic analysis) for truncating the matrices with eigenvalues.
 
@@ -1382,10 +1385,10 @@ Where TFbd is frequency of the term b in document d
 \textbf{88. Describe precision, recall, and F1 measures in document
 retrieval.}\includegraphics[width=1.81927in,height=2.35781in]{media/image23.png}
 
-\underline{Precision}: proportion of relevant documents in the obtained
+\textit{Precision}: proportion of relevant documents in the obtained
 ones
 
-\underline{Recall}: proportion of obtained relevant documents. How many
+\textit{Recall}: proportion of obtained relevant documents. How many
 of the relevant documents we succeeded retrieving.
 
 F1 is just weighted harmonic mean (where beta = 1), weighted precision
@@ -1480,24 +1483,24 @@ Possible uses: was used by google to order search results
 \textbf{91. Describe the main ideas and implementation of LSA, word2vec,
 ELMo, and BERT.}
 
-\underline{LSA}: uses term-context matrix, the idea being the words with
+\textit{LSA}: uses term-context matrix, the idea being the words with
 similar context should be closer. It reduces the dimensionality of the
 matrix with SVD and uses k most important dimensions to represent the
 embedding of the words. (basically PCA)
 
-\underline{Word2vec}: instead of counting how many times a word appears
+\textit{Word2vec}: instead of counting how many times a word appears
 near another word. It trains a classifier to answer that question (for
 example NN). Then it uses classifiers learned weights as the word
 embeddings. It doesn't take context into an account. Solution: ELMo and
 BERT.
 
-\underline{ELMo}: looks at the entire sentence before assigning each
+\textit{ELMo}: looks at the entire sentence before assigning each
 word in it an embedding. ELMo predicts the next word in a sequence of
 words - a task called \emph{Language Modeling (LM)}. first layers
 capture morphological and syntactic properties, deeper layers encode
 semantical properties.
 
-\underline{BERT}: predicts masked words in a sentence. also predicts
+\textit{BERT}: predicts masked words in a sentence. also predicts
 order of sentences: is sentence A followed by sentence B or not \ldots{}
 train a classifier built on the top layer foreach task that you fine
 tune for , e.g ., Q\&A, NER, inference. achieves state of the art
@@ -1649,12 +1652,12 @@ Word clouds of different languages can be aligned.
 \textbf{98. Describe a few semantic technologies and a few important NLP
 tasks.}
 
-\underline{Semantic technologies aka Text mining:} to acquire new
+\textit{Semantic technologies aka Text mining:} to acquire new
 knowledge. Summarization, document relations, clustering of documents,
 related news, new topic detection, q\&a, named entity recognition,
 inference, coreference resolution.
 
-\underline{NLP tasks:}
+\textit{NLP tasks:}
 
 \begin{quote}
 \includegraphics[width=1.93777in,height=2.20364in]{media/image29.png}
@@ -1664,7 +1667,7 @@ inference, coreference resolution.
 classification, machine translation (MT), or question answering
 problems?}
 
-\underline{Text summarization}: general, guided (describe in advance
+\textit{Text summarization}: general, guided (describe in advance
 what sort of information do you want). One/multi document. Extractive
 and abstractive (mix 2 words like increase/decrease).
 
@@ -1672,7 +1675,7 @@ For short text we use \emph{abstractive} summarization.
 
 For longer texts we use \emph{extractive} summarization.
 
-\underline{Sentiment classification:}
+\textit{Sentiment classification:}
 
 Binary, tenary, n-ary
 
@@ -1686,12 +1689,12 @@ With BERT, RNN, Encoder-Decoders, NMT(neural machine translation)
 
 \textbf{100. What are the language model and translation model in MT?}
 
-\underline{Language model:} each target (English) sentence e is assigned
+\textit{Language model:} each target (English) sentence e is assigned
 a probability p(e). Estimation of probabilities for the whole sentences
 is not possible (why?), therefore we use language models, e.g., 3 gram
 models or neural language models.
 
-\underline{Translation model:} We have to assign a probability of p(
+\textit{Translation model:} We have to assign a probability of p(
 f\textbar e ), which is a probability of a foreign language sentence f,
 given target sentence e. We search the e which maximizes p(e) *
 p(f\textbar e). We take into account the position of a word and how many
@@ -1704,10 +1707,10 @@ into e (translation model, p(f\textbar e))
 
 \textbf{101. What is the encoder-decoder model in NLP?}
 
-\underline{Encoder}: use word representation → word , 1 hot vector,
+\textit{Encoder}: use word representation → word , 1 hot vector,
 dense embedding, recurrent network
 
-\underline{Decoder:} computation of the next state of recurrent network,
+\textit{Decoder:} computation of the next state of recurrent network,
 probability of the next word, selection of the next word
 
 Encoder takes a sentence and transforms it into latent vector
@@ -1730,15 +1733,15 @@ a special context vector for each decoder time step.
 \section{\texorpdfstring{\protect\includegraphics[width=6.05908in,height=2.45313in]{media/image18.png}}{}}\label{section}}
 
 \hypertarget{reinforcement-learning-rl}{%
-\section{\texorpdfstring{\underline{Reinforcement learning
+\section{\texorpdfstring{\textit{Reinforcement learning
 (RL)}}{Reinforcement learning (RL)}}\label{reinforcement-learning-rl}}
 
-\href{https://www.youtube.com/watch?v=nyjbcRQ-uQ8\&list=PLZbbT5o_s2xoWNVdDudn51XM8lOuZ_Njv\&index=1\&ab_channel=deeplizard}{\textbf{\underline{https://www.youtube.com/watch?v=nyjbcRQ-uQ8\&list=PLZbbT5o\_s2xoWNVdDudn51XM8lOuZ\_Njv\&index=1\&ab\_channel=deeplizard}}}
+\href{https://www.youtube.com/watch?v=nyjbcRQ-uQ8\&list=PLZbbT5o_s2xoWNVdDudn51XM8lOuZ_Njv\&index=1\&ab_channel=deeplizard}{\textbf{\textit{https://www.youtube.com/watch?v=nyjbcRQ-uQ8\&list=PLZbbT5o\_s2xoWNVdDudn51XM8lOuZ\_Njv\&index=1\&ab\_channel=deeplizard}}}
 
 \textbf{103. Describe when and why to apply RL.}
 
 We can use it when we are in an environment where we can afford to make
-mistakes. When we need to make decisions in \underline{an uncertain
+mistakes. When we need to make decisions in \textit{an uncertain
 environment.}
 
 Why?: simple algorithms, works most of the time, no need to label the
@@ -1793,10 +1796,10 @@ giving a resulting reward ``r(t + 1)'' and next state ``s(t + 1)''.
 
 \textbf{108. Describe returns for episodic and continuing tasks.}
 
-\underline{Episodic}: interaction breaks naturally into episodes (eg.
+\textit{Episodic}: interaction breaks naturally into episodes (eg.
 plays of a game, trips through a maze)
 
-\underline{Continuing}: interaction does not have natural episodes.
+\textit{Continuing}: interaction does not have natural episodes.
 
 IN OTHER WORDS ...
 
@@ -1871,10 +1874,10 @@ state s' and giving the user a corresponding reward.
 \textbf{114. Describe the State-value function and action-value
 functions?}
 
-\underline{State-value function:} the value of a state is the expected
+\textit{State-value function:} the value of a state is the expected
 return starting from that state, depends on the agents policy
 
-\underline{Action-value function:} the value of taking an action in a
+\textit{Action-value function:} the value of taking an action in a
 state under policy $\pi$ is the expected return starting from that state,
 taking that action and thereafter following $\pi$.
 
@@ -1955,12 +1958,12 @@ V(policy), then improve policy based on that V(policy))
 \textbf{120. Describe policy-value iteration, value iteration, and
 policy iteration approaches to RL?}
 
-\underline{Policy iteration}: policy\_0 → V(policy\_0) → policy\_1 →
+\textit{Policy iteration}: policy\_0 → V(policy\_0) → policy\_1 →
 V(policy\_1) → \ldots{}
 
 V(policy\_i) doesn't need to converge, just move policy towards best one
 
-\underline{Value iteration}:
+\textit{Value iteration}:
 
 \includegraphics[width=3.60938in,height=0.46166in]{media/image34.png}
 
@@ -2088,19 +2091,19 @@ learners?}
 \begin{itemize}
 \item
   \begin{quote}
-  \underline{Eventual convergence to optimality (}Many algorithms come
+  \textit{Eventual convergence to optimality (}Many algorithms come
   with a provable guarantee of asymptotic convergence to optimal
-  behavior. This is reassuring, but useless\underline{)}
+  behavior. This is reassuring, but useless\textit{)}
   \end{quote}
 \item
   \begin{quote}
-  \underline{Speed of convergence to optimality} (more practical → speed
+  \textit{Speed of convergence to optimality} (more practical → speed
   of convergence to near optimality (how near?) OR level of performance
   after a given time (what time?))
   \end{quote}
 \item
   \begin{quote}
-  \underline{Regret} (expected decrease in reward gained due to
+  \textit{Regret} (expected decrease in reward gained due to
   executing the learning algorithm instead of behaving optimally from
   the very beginning; these results are hard to obtain)
   \end{quote}
