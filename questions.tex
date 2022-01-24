@@ -274,7 +274,7 @@ well for 10000 again)
 This is observed only in neural networks (and random forests(?)). Other
 models observe the ``classic'' overfitting phenomenon.
 
-\includegraphics[width=\columnwidth]{media/image1.png}
+% \includegraphics[width=\columnwidth]{media/image1.png}
 
 When model complexity keeps increasing, the testing error first starts
 decreasing due to the adaptation of model parameters to the data
@@ -284,9 +284,9 @@ after the complexity exceeds the interpolation threshold, the mystery
 happens. As long as we keep increasing the model complexity, test error
 keep decreasing and after certain complexity, the testing error start to
 be smaller than the sweet pot that we get within the
-\emph{under-parameterization regime}
+\textit{under-parameterization regime}
 
-\includegraphics[width=\columnwidth]{media/image24.png}
+% \includegraphics[width=\columnwidth]{media/image24.png}
 
 \textbf{25. Describe bias-variance trade-off in relation to kNN
 classifier.}
@@ -299,38 +299,23 @@ trees, R-trees, RKD-tree, locally sensitive hashing, and hierarchical
 k-means.}
 
 \begin{itemize}
-\item
-  \begin{quote}
-  \textit{k-d} trees are a generalization of BST, where each node
+\item \textit{k-d} trees are a generalization of BST, where each node
   holds a vector instead of a single value. Before building a tree we
   must normalize values to the interval {[}0,1{]}, and we split each
   node on dimension so that we maximize variance in that dimension, and
   we use the median of that dimension as a splitting value. Leaves
   usually hold multiple values.
-  \end{quote}
-\item
-  \begin{quote}
-  \textit{R-trees} are similar to k-d trees but are generalization of
+\item \textit{R-trees} are similar to k-d trees but are generalization of
   B-trees.
-  \end{quote}
-\item
-  \begin{quote}
-  \textit{RKD-trees} are multiple trees where we split on random
+\item \textit{RKD-trees} are multiple trees where we split on random
   dimensions from a set of dimensions with highest variance. If the
   probability of not finding nearest neighbor in the single tree is p
   then with m trees is p\^{}m
-  \end{quote}
-\item
-  \begin{quote}
-  \textit{Local sensitive hashing}: we have multiple hash tables with
+\item \textit{Local sensitive hashing}: we have multiple hash tables with
   multiple hash functions, near instances are also near when hashed
   (hashing with random hyperplanes)
-  \end{quote}
-\item
-  \begin{quote}
-  \textit{Hierarchical k-means}: recursively run k-means clustering,
+\item \textit{Hierarchical k-means}: recursively run k-means clustering,
   until clusters are small enough
-  \end{quote}
 \end{itemize}
 
 \textbf{27. What are the Bayes error rate and Bayes optimal classifier?}
@@ -366,7 +351,6 @@ bootstrapped training sample, but when building these trees, each time a
 split in a tree is considered, a random sample of m predictors is chosen
 as split candidates form the full set of p
 predictors
-\includegraphics[width=\columnwidth]{media/image35.png}
 
 \textit{Stacking:} Predictions of base learners are used as input for
 meta learner (shitty neural networks).
@@ -480,7 +464,7 @@ lasso)
 \textbf{33. Describe the difference between impurity based and
 context-sensitive attribute evaluation.}
 
-\textit{Impurity based}: assume \emph{conditional independence
+\textit{Impurity based}: assume \textit{conditional independence
 between the attributes} (information gain, Gini index, MDL, distance
 measure, MSE, MAE (mean absolute error))
 
@@ -602,23 +586,23 @@ and unlabeled data to evaluate feature relevance
 \textit{Unsupervised:} criterion: preserve similarity between
 instances.
 
-eigenvalues of L (\emph{laplacian matrix}) measure the separability of
+eigenvalues of L (\textit{laplacian matrix}) measure the separability of
 the components of the graph and the eigenvectors are the corresponding
 soft cluster indicators
 
 Or
 
-With \emph{clustering}
+With \textit{clustering}
 
 \textbf{41. How can we increase the stability of feature selection?}
 
 We can use an ensemble approach to:
 
-1. Produce diverse feature sets
+1. Produce diverse feature sets (\textit{different feature selection techniques, 
+instance-level pertubation, feature-level pertubation, stochasticity 
+in the feature selector, combination of techniques})
 
-2. Then aggregate them
-
-\includegraphics[width=\columnwidth]{media/image36.png}
+2. Then aggregate them (weighted voting, counting)
 
 \textbf{42. Describe the main ideas of multi-view, multi-label, and
 multitask learning.}
@@ -631,7 +615,7 @@ Approaches:
 
 \begin{itemize}
 \item Baseline: concatenate all views
-\item Construct \emph{tensor space} from views
+\item Construct \textit{tensor space} from views
 \item Relief like approach (different views contribute to the distances
   between objects)
 \item Multi-view clustering \& feature selection
@@ -721,7 +705,7 @@ Evaluation of attribute A is the difference between:
 \end{itemize}
 
 When two instances end in the same leaf of the tree we increase their
-similarity score, average over all trees gives \emph{similarity measure}
+similarity score, average over all trees gives \textit{similarity measure}
 $\rightarrow$ similarity matrix
 
 \textbf{48. Describe the main parameters of random forests and
@@ -773,7 +757,7 @@ Euclidean distance divided by a free parameter $\sigma^2$
 
 Since the value of the RBF kernel decreases with distance and ranges
 between zero (in the limit) and one (when $x = x'$), it has a ready
-interpretation as a \emph{similarity measure}
+interpretation as a \textit{similarity measure}
 
 \textbf{52. Describe how to use SVM for more than two classes?}
 
@@ -858,7 +842,7 @@ training.
 and weaknesses?}
 
 Deep neural networks are NNs with more than one hidden layer. They
-perform \emph{nonlinear regression} (from a statistical point of view).
+perform \textit{nonlinear regression} (from a statistical point of view).
 
 STRENGTHS: very powerful, high tolerance to noisy data, ability to
 classify untrained patterns, well suited for continuous valued inputs
@@ -936,11 +920,11 @@ images/ text classification.
 \textbf{64. Describe the main idea and components of autoencoders?}
 
 Autoencoders are designed to reproduce their input (especially for
-images). They compress input into a \emph{latent-space} of usually
+images). They compress input into a \textit{latent-space} of usually
 smaller dimension. Then they reconstruct the input from the latent space
 (even without the noise).
 
-Encoder: compress input into a \emph{latent space} of usually smaller
+Encoder: compress input into a \textit{latent space} of usually smaller
 dimension. h = f(x)
 
 Decoder: reconstruct input from the latent space. r = g(f(x)) with r as
@@ -986,7 +970,7 @@ model transparent. Better models enable better explanation at the domain
 level.
 
 \textit{Instance-level:} explain predictions for each instance
-separately (model-based). \emph{Nomograms}
+separately (model-based). \textit{Nomograms}
 
 (For titanic, we would have a separate nomogram for each person. We
 average them at the end)
@@ -1046,7 +1030,7 @@ interactions
 \includegraphics[width=\columnwidth]{media/image21.png}
 
 \begin{itemize}
-\item Alternative formulation of \emph{shapley value}
+\item Alternative formulation of \textit{shapley value}
 \item ``hide'' any subset of attributes at a time (2 a subsets!)
 \item the feature gets some credit for standalone contributions and for contributions in interactions
 \end{itemize}
@@ -1054,7 +1038,7 @@ interactions
 \textit{LIME:} Local Interpretable Model-agnostic Explanations,
 perturbations in the locality of an explained
 instance.
-\includegraphics[width=\columnwidth]{media/image25.png}
+% \includegraphics[width=\columnwidth]{media/image25.png}
 
 \begin{itemize}
 \item Faster than IME, works for many features (text and images)
@@ -1109,22 +1093,13 @@ text organization, presupposition and implicature
 society, intentions in communications
 
 \textbf{76. Describe how to preprocess text in text mining.}
-
-\begin{itemize}
-\item To lower case
-\item Remove punctuation
-\item Remove numbers
-\item Remove stopwords (a, and, the, of,...)
-\item Strip whitespaces
-\item Stem the text
-\end{itemize}
+To lower case, Remove punctuation, Remove numbers, Remove stopwords (a, and, the, of,...), Strip whitespaces, Stem the text
 
 \textbf{77. Describe lemmatization, stemming, POS tagging, dependency
 parsing, and named entity recognition.}
 
 \textit{Lemmatization}: the process of grouping together the
-different inflected forms of a word so they can be analyzed as a single
-item
+different inflected forms of a word so they can be analyzed as a single item
 
 \textit{Stemming}: reduce the words to their root ``state'' (it is
 getting out of use.)
@@ -1147,16 +1122,7 @@ Corpora, wiki, SSKJ, FRAN, GigaFida, KRES, ccKres, GOS, JANES, KAS
 \textbf{79. Describe the structure of WordNets.}
 
 WordNet is a database composed of synsets (cognitive synonyms):
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item Synonyms
-\item Hypernyms
-\item Hyponyms
-\item Meronyms
-\item Holonyms
-\item Etc.
-\end{enumerate}
+Synonyms, Hypernyms, Hyponyms, Meronyms, Holonyms, Etc.
 
 WordNet® is a large lexical database of English. Nouns, verbs,
 adjectives and adverbs are grouped into sets of cognitive synonyms
@@ -1166,7 +1132,7 @@ by means of conceptual-semantic and lexical relations.
 \textbf{80. Describe approaches to document retrieval.}
 
 Historically people \textit{used keywords,} but \textit{today
-\emph{full text search}} is used (by the help of organized databases,
+\textit{full text search}} is used (by the help of organized databases,
 indexing and good searching algorithms)
 
 \textbf{81. Describe the inverted file index.}
@@ -1326,7 +1292,7 @@ BERT.
 
 \textit{ELMo}: looks at the entire sentence before assigning each
 word in it an embedding. ELMo predicts the next word in a sequence of
-words - a task called \emph{Language Modeling (LM)}. first layers
+words - a task called \textit{Language Modeling (LM)}. first layers
 capture morphological and syntactic properties, deeper layers encode
 semantical properties.
 
@@ -1345,22 +1311,13 @@ Dominates text classification field.
 \textbf{92. Which are the desired properties of word embeddings?}
 
 They shall preserve relations from the original space. We need
-\emph{dense vector embeddings}.
+\textit{dense vector embeddings}.
 
 \begin{itemize}
-\item
-  \begin{quote}
-  Matrix based transformations to reduce dimensionality (SVD or LSA -
+\item Matrix based transformations to reduce dimensionality (SVD or LSA -
   latent semantic analysis)
-  \end{quote}
-\item
-  \begin{quote}
-  Neural embeddings (word2vec, Glove)
-  \end{quote}
-\item
-  \begin{quote}
-  Contextual neural embeddings (ELMo, BERT)
-  \end{quote}
+\item Neural embeddings (word2vec, Glove)
+\item Contextual neural embeddings (ELMo, BERT)
 \end{itemize}
 
 SVM, deep NN -\textgreater{} both require numerical input
@@ -1372,38 +1329,17 @@ SVM, deep NN -\textgreater{} both require numerical input
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item
-  \begin{quote}
-  Frequency based Embedding (Count vector, TD-IDF, co-occurrence vector)
-  \end{quote}
-\item
-  \begin{quote}
-  Prediction based Embedding (Continuous Bag of words, Skip -- Gram
+\item Frequency based Embedding (Count vector, TD-IDF, co-occurrence vector)
+\item Prediction based Embedding (Continuous Bag of words, Skip -- Gram
   model)
-  \end{quote}
 \end{enumerate}
 
 \begin{itemize}
-\item
-  \begin{quote}
-  Dense vector embeddings
-  \end{quote}
-\item
-  \begin{quote}
-  Neural embeddings
-  \end{quote}
-\item
-  \begin{quote}
-  Diachronic embeddings
-  \end{quote}
-\item
-  \begin{quote}
-  Contextual embeddings
-  \end{quote}
-\item
-  \begin{quote}
-  Cross-lingual embeddings
-  \end{quote}
+\item Dense vector embeddings
+\item Neural embeddings
+\item Diachronic embeddings
+\item Contextual embeddings
+\item Cross-lingual embeddings
 \end{itemize}
 
 \textbf{94. Describe a few relations expressed with modern word
@@ -1460,9 +1396,9 @@ problems?}
 what sort of information do you want). One/multi document. Extractive
 and abstractive (mix 2 words like increase/decrease).
 
-For short text we use \emph{abstractive} summarization.
+For short text we use \textit{abstractive} summarization.
 
-For longer texts we use \emph{extractive} summarization.
+For longer texts we use \textit{extractive} summarization.
 
 \textit{Sentiment classification:}
 
@@ -1688,7 +1624,7 @@ return for the best action from that state
    &= \sum_{s'} P_{ss'}^{a} \left[ R_{ss'}^a + \gamma \max_{a'} Q^*(s', a')\right]
 \end{align*}
 
-$Q$ is the unique solution of this \emph{system of nonlinear equations}.
+$Q$ is the unique solution of this \textit{system of nonlinear equations}.
 Once we have $Q^*$ we can further calculate the optimal policy by taking
 the optimal action:
 
@@ -1809,7 +1745,7 @@ Assure exploration: $\varepsilon$-greedy!
 \textbf{127. How to use function approximation in RL?}
 
 Used when in complex environments (Q is too complex), we describe a
-state with a \emph{feature vector}. We can then calculate Q as any
+state with a \textit{feature vector}. We can then calculate Q as any
 regression model by using the state feature vectors as its parameters.
 (\textless-\/- e.g.)
 
@@ -1819,22 +1755,13 @@ regression model by using the state feature vectors as its parameters.
 learners?}
 
 \begin{itemize}
-\item
-  \begin{quote}
-  \textit{Eventual convergence to optimality (}Many algorithms come
+\item \textit{Eventual convergence to optimality (}Many algorithms come
   with a provable guarantee of asymptotic convergence to optimal
   behavior. This is reassuring, but useless\textit{)}
-  \end{quote}
-\item
-  \begin{quote}
-  \textit{Speed of convergence to optimality} (more practical → speed
+\item \textit{Speed of convergence to optimality} (more practical → speed
   of convergence to near optimality (how near?) OR level of performance
   after a given time (what time?))
-  \end{quote}
-\item
-  \begin{quote}
-  \textit{Regret} (expected decrease in reward gained due to
+\item \textit{Regret} (expected decrease in reward gained due to
   executing the learning algorithm instead of behaving optimally from
   the very beginning; these results are hard to obtain)
-  \end{quote}
 \end{itemize}
