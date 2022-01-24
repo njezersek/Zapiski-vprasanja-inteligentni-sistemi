@@ -76,7 +76,7 @@ the best permutations
 \textit{Trees}: good for problems where we want to find the formula
 for the solution (as formulas can be nicely represented with trees)
 
-\textbf{7. What are linear crossover, Gray coding \$of binary numbers,
+\textbf{7. What are linear crossover, Gray coding of binary numbers,
 adaptive crossover, gaussian mutation, Lamarckian mutation, and elitism?
 What are their advantages compared to baselines?}
 
@@ -157,8 +157,6 @@ Use fitness functions with different objectives and try to improve them.
 \textit{Pareto}: we cannot improve conflicting criteria without
 getting worse on others
 
-\href{https://en.wikipedia.org/wiki/Multi-objective_optimization}{\textit{https://en.wikipedia.org/wiki/Multi-objective\_optimization}}
-
 \textbf{14. Explain the main problems of genetic programming.}
 
 Needs huge populations(thousands), it's slow, problems involving
@@ -166,23 +164,21 @@ physical environments: making trees that are really executable,
 execution can change the environment which changes fitness function,
 calculating fitness function with simulation takes a lot of time.
 
-\hypertarget{machine-learning-ml}{%
-\section{\texorpdfstring{\textit{Machine learning
-(ML)}}{Machine learning (ML)}}\label{machine-learning-ml}}
+\section{Machine learning}
 
-Try to estimate f(X) so we can get the most accurate Y to the actual
+Try to estimate $f(X)$ so we can get the most accurate $Y$ to the actual
 result.
 
-\includegraphics[width=4.15104in,height=0.91284in]{media/image5.png}
+\[ Y = f(X) + \varepsilon\]
 
 \textbf{15. Describe the two main goals of ML, prediction and inference,
 and explain why they are sometimes in contradiction.}
 
 \textit{Prediction}: if we can make a good estimate, then we can make
-accurate predictions for the response (Y) based on X
+accurate predictions for the response $Y$ based on $X$
 
 \textit{Inference:} we are interested in the type of relationship
-between Y and X, model interpretability is essential for inference.
+between $Y$ and $X$, model interpretability is essential for inference.
 
 If we want good accuracy (prediction), we might need a much more
 complicated model which will have lower interpretability and vice versa.
@@ -199,10 +195,10 @@ neural networks
 \textbf{17. Describe the main characteristics of supervised,
 unsupervised, and semi-supervised ML methods?}
 
-\textit{Supervised learning:} both X and Y are observed
+\textit{Supervised learning:} both $X$ and $Y$ are observed
 
-\textit{Unsupervised:} only X are observed, we need to use X to guess
-what Y would have been and build a model from there
+\textit{Unsupervised:} only $X$ are observed, we need to use $X$ to guess
+what $Y$ would have been and build a model from there
 
 \textit{Semi-supervised}: only a small sample of labelled instances
 are observed but a large set of unlabeled instances
@@ -210,17 +206,17 @@ are observed but a large set of unlabeled instances
 \textbf{18. What is the difference between regression and
 classification? Give examples of problems for each type.}
 
-Regression: Y is continuous/numerical (predict the value of a share on
+Regression: $Y$ is continuous/numerical (predict the value of a share on
 the stock market, predict the temperature).
 
-Classification: Y is categorical (predict if an event will happen, eg.
+Classification: $Y$ is categorical (predict if an event will happen, eg.
 is this email spam or not, will it be cloudy, rainy or sunny)
 
 \textbf{19. What are association rules, and how they differ from
 decision rules?}
 
 \textit{Association rules} are rules that tell us how some ``event''
-is associated with another (how some X is associated with some Y).
+is associated with another (how some $X$ is associated with some $Y$).
 
 \textit{A decision rule} is a simple IF-THEN statement consisting of
 a condition and a prediction.
@@ -239,7 +235,7 @@ Therefore, many learning algorithms solve optimization problems.
 Optimization: objective is to minimize test error (optimize cost
 function)
 
-Search: find parameters that describe our f(X) = y best
+Search: find parameters that describe our $f(X) = y$ best
 
 \textbf{22. Describe different properties of ML models: bias, variance,
 generalization, hypothesis language.}
@@ -278,7 +274,7 @@ well for 10000 again)
 This is observed only in neural networks (and random forests(?)). Other
 models observe the ``classic'' overfitting phenomenon.
 
-\includegraphics[width=4.26436in,height=3.78646in]{media/image1.png}
+\includegraphics[width=\columnwidth]{media/image1.png}
 
 When model complexity keeps increasing, the testing error first starts
 decreasing due to the adaptation of model parameters to the data
@@ -290,7 +286,7 @@ keep decreasing and after certain complexity, the testing error start to
 be smaller than the sweet pot that we get within the
 \emph{under-parameterization regime}
 
-\includegraphics[width=6.70313in,height=3.73592in]{media/image24.png}
+\includegraphics[width=\columnwidth]{media/image24.png}
 
 \textbf{25. Describe bias-variance trade-off in relation to kNN
 classifier.}
@@ -369,7 +365,8 @@ uses information about errors of previous trees, weak learners ensemble
 bootstrapped training sample, but when building these trees, each time a
 split in a tree is considered, a random sample of m predictors is chosen
 as split candidates form the full set of p
-predictors\includegraphics[width=3.42406in,height=2.00895in]{media/image35.png}
+predictors
+\includegraphics[width=\columnwidth]{media/image35.png}
 
 \textit{Stacking:} Predictions of base learners are used as input for
 meta learner (shitty neural networks).
@@ -559,7 +556,7 @@ on it?}
 
 The confusion matrix represents how data was classified by our
 classifier, compared to observed data.
-\includegraphics[width=2.69271in,height=1.50359in]{media/image17.png}
+\includegraphics[width=\columnwidth]{media/image17.png}
 
 TP: true positive, values that the model predicted as positive and are
 observed to be positive
@@ -600,7 +597,8 @@ recall
 
 \includegraphics[width=2.42708in,height=0.90625in]{media/image12.png}where
 the one Yi is observed Yi and the second is
-predicted\includegraphics[width=3.55208in,height=0.66667in]{media/image38.png}
+predicted
+\includegraphics[width=\columnwidth]{media/image38.png}
 
 \textbf{40. What are the ideas of unsupervised and semi-supervised
 feature selection?}
@@ -629,7 +627,7 @@ We can use an ensemble approach to:
 
 2. Then aggregate them
 
-\includegraphics[width=5.91146in,height=1.71993in]{media/image36.png}
+\includegraphics[width=\columnwidth]{media/image36.png}
 
 \textbf{42. Describe the main ideas of multi-view, multi-label, and
 multitask learning.}
@@ -720,7 +718,7 @@ that is the mode of the classes (classification) or mean/average
 prediction (regression) of the individual trees. But instead of using
 D\_i to construct our trees we also use bagging to select a subset of m
 features:
-\includegraphics[width=3.32292in,height=0.58333in]{media/image20.png}
+\[ m \approx \sqrt{p} \quad \text{or} \quad m \approx 1 + \log_2 p \]
 
 !!!not sure if we use bagging to select instances at the beginning and
 then just subsample the features for each tree or we also use bagging of
@@ -783,7 +781,9 @@ differentiable loss function.
 
 \href{https://corporatefinanceinstitute.com/resources/knowledge/other/gradient-boosting/}{\textit{Gradient
 Boosting - Overview, Tree Sizes,
-Regularization}}\includegraphics[width=2.60938in,height=2.32109in]{media/image33.png}
+Regularization}}
+
+\includegraphics[width=\columnwidth]{media/image33.png}
 
 \textbf{50. Describe the notion of margin in kernel methods.}
 
@@ -807,12 +807,12 @@ boundary.
 
 \textit{Radial basis function (RBF):}
 
-\includegraphics[width=3.33333in,height=0.84375in]{media/image30.png}
+\[ K(x, x') = \exp \left( - \frac{ | x - x' | ^2 }{ 2\sigma^2} \right) \]
 
-Euclidean distance divided by a free parameter sigma\^{}2
+Euclidean distance divided by a free parameter $\sigma^2$
 
 Since the value of the RBF kernel decreases with distance and ranges
-between zero (in the limit) and one (when x = x'), it has a ready
+between zero (in the limit) and one (when $x = x'$), it has a ready
 interpretation as a \emph{similarity measure}
 
 \textbf{52. Describe how to use SVM for more than two classes?}
@@ -831,15 +831,13 @@ Choose 1v1 if k is small enough.
 Activation functions are mathematical equations that determine the
 output of a neural network.
 
-\textit{Step functions:} \emph{f(x) = 1 if x \textgreater{} 0 else 0}
+\textit{Step functions:} $f(x) = {1 \text{ if } x > 0 \text{ else } 0}$
 
-\textit{ReLU (Rectified Linear Unit):} \emph{f(x) = max(0, x)}
+\textit{ReLU (Rectified Linear Unit):} $f(x) = \max(0, x)$
 
-\textit{Sigmoid function} →
-\includegraphics[width=0.99219in,height=0.37256in]{media/image11.png}
+\textit{Sigmoid function} $ S(x) = 1/(1+\exp(-x)) $
 
-\textit{Softplus:} \emph{f(x) = ln(1+e\^{}x)} \ldots{} approximation
-of ReLU
+\textit{Softplus:} $f(x) = \ln(1+e^x)$ (\textit{approximation of ReLU})
 
 \textbf{54. Describe the main idea of backpropagation learning for NNs.}
 
@@ -863,7 +861,10 @@ of ReLU
 backpropagation really doing? \textbar{} Deep learning, chapter 3}}
 
 \textbf{55. Describe the role of criterion (loss) function in
-NN?}\includegraphics[width=1.89421in,height=1.53125in]{media/image32.png}
+NN?}
+\[C = -\sum_j t_j \log y_j \]
+\[ \frac{\partial C}{\partial z_i} = \sum_j\frac{\partial C}{\partial y_j} \frac{\partial y_j}{\partial z_i} = y_i - t_i \]
+Where $t_i$ is the target and $y_i$ predicted value.
 
 To see how much we missed in classifying an input. We use this to
 backpropagate and improve the network.
@@ -1071,7 +1072,7 @@ Importance of a feature or a group of features in a specific model can
 be estimated by simulating lack of knowledge about the values of the
 feature or randomly shuffling them to test its importance
 
-\includegraphics[width=5.18229in,height=1.75613in]{media/image6.png}
+\includegraphics[width=\columnwidth]{media/image6.png}
 
 \textbf{71. Explain the difference between instance-based and
 model-based explanations?}
@@ -1094,7 +1095,8 @@ technique?}
 
 \textit{IME:} Interactions-based Method for Explanation, the feature
 gets some credit for standalone contributions and for contributions in
-interactions\includegraphics[width=3.46576in,height=1.98044in]{media/image21.png}
+interactions
+\includegraphics[width=\columnwidth]{media/image21.png}
 
 \begin{itemize}
 \item
@@ -1120,7 +1122,8 @@ interactions\includegraphics[width=3.46576in,height=1.98044in]{media/image21.png
 
 \textit{LIME:} Local Interpretable Model-agnostic Explanations,
 perturbations in the locality of an explained
-instance.\includegraphics[width=2.27342in,height=1.27262in]{media/image25.png}
+instance.
+\includegraphics[width=\columnwidth]{media/image25.png}
 
 \begin{itemize}
 \item
@@ -1252,7 +1255,7 @@ Slovene (or your language).}
 
 Corpora, wiki, SSKJ, FRAN
 
-\includegraphics[width=4.45715in,height=2.90953in]{media/image16.png}
+\includegraphics[width=\columnwidth]{media/image16.png}
 
 \textbf{79. Describe the structure of WordNets.}
 
@@ -1309,7 +1312,7 @@ we store in how many documents it appeared and the overall number of
 appearances. Then it has a pointer to the document where we can find the
 location of the word in the document.
 
-\includegraphics[width=5.03646in,height=2.17521in]{media/image10.png}
+\includegraphics[width=\columnwidth]{media/image10.png}
 
 \textbf{82. Compare search with logical operators and ranking based
 search.}
@@ -1383,7 +1386,7 @@ Wbd = TFbd * IDFbd
 Where TFbd is frequency of the term b in document d
 
 \textbf{88. Describe precision, recall, and F1 measures in document
-retrieval.}\includegraphics[width=1.81927in,height=2.35781in]{media/image23.png}
+retrieval.}\includegraphics[width=\columnwidth]{media/image23.png}
 
 \textit{Precision}: proportion of relevant documents in the obtained
 ones
@@ -1396,7 +1399,7 @@ and recall
 
 ( 2 * P * R / P + R)
 
-\includegraphics[width=4.39063in,height=1.74856in]{media/image15.png}
+\includegraphics[width=\columnwidth]{media/image15.png}
 
 \textbf{89. Describe problems of web search and possible improvements.}
 
@@ -1478,7 +1481,7 @@ and number of pages pointing to it
 
 Possible uses: was used by google to order search results
 
-\includegraphics[width=5.42188in,height=2.41372in]{media/image2.png}
+\includegraphics[width=\columnwidth]{media/image2.png}
 
 \textbf{91. Describe the main ideas and implementation of LSA, word2vec,
 ELMo, and BERT.}
@@ -1599,7 +1602,7 @@ tune for , e.g ., Q\&A, NER, inference.
   \end{quote}
 \end{itemize}
 
-\includegraphics[width=3.61979in,height=3.04856in]{media/image13.png}
+\includegraphics[width=\columnwidth]{media/image13.png}
 
 \begin{itemize}
 \item
@@ -1608,7 +1611,7 @@ tune for , e.g ., Q\&A, NER, inference.
   \end{quote}
 \end{itemize}
 
-\includegraphics[width=3.29688in,height=2.8697in]{media/image19.png}
+\includegraphics[width=\columnwidth]{media/image19.png}
 
 \begin{itemize}
 \item
@@ -1617,16 +1620,16 @@ tune for , e.g ., Q\&A, NER, inference.
   \end{quote}
 \end{itemize}
 
-\includegraphics[width=2.44427in,height=2.04325in]{media/image37.png}
+\includegraphics[width=\columnwidth]{media/image37.png}
 
 \textbf{97. Describe the idea and a few uses of cross-lingual
 embeddings?}
 
 Word clouds of different languages can be aligned.
 
-\includegraphics[width=6.26772in,height=1.34722in]{media/image22.png}
+\includegraphics[width=\columnwidth]{media/image22.png}
 
-\includegraphics[width=2.66146in,height=2.2209in]{media/image27.png}
+\includegraphics[width=\columnwidth]{media/image27.png}
 
 \begin{itemize}
 \item
@@ -1660,7 +1663,7 @@ inference, coreference resolution.
 \textit{NLP tasks:}
 
 \begin{quote}
-\includegraphics[width=1.93777in,height=2.20364in]{media/image29.png}
+\includegraphics[width=\columnwidth]{media/image29.png}
 \end{quote}
 
 \textbf{99. How to approach text summarization, sentiment
@@ -1717,7 +1720,7 @@ Encoder takes a sentence and transforms it into latent vector
 representation. Decoder takes that latent vector representation and
 transforms it back into a sentence. Both are language specific.
 
-\includegraphics[width=4.48438in,height=4.22366in]{media/image40.png}
+\includegraphics[width=\columnwidth]{media/image40.png}
 
 \textbf{102. What is the} \textbf{attention mechanism} \textbf{in deep
 neural networks?}
@@ -1730,7 +1733,7 @@ sentences, this is where the attention mechanism comes in which produces
 a special context vector for each decoder time step.
 
 \hypertarget{section}{%
-\section{\texorpdfstring{\protect\includegraphics[width=6.05908in,height=2.45313in]{media/image18.png}}{}}\label{section}}
+\section{\texorpdfstring{\protect\includegraphics[width=\columnwidth]{media/image18.png}}{}}\label{section}}
 
 \hypertarget{reinforcement-learning-rl}{%
 \section{\texorpdfstring{\textit{Reinforcement learning
@@ -1818,7 +1821,7 @@ terminal state.
 
 \textbf{109. What is the discounted return, and what is its role?}
 
-\includegraphics[width=5.49479in,height=1.48779in]{media/image26.png}
+\includegraphics[width=\columnwidth]{media/image26.png}
 
 Lambda makes rewards (moves) that are further away less valuable.
 
@@ -1881,7 +1884,7 @@ return starting from that state, depends on the agents policy
 state under policy $\pi$ is the expected return starting from that state,
 taking that action and thereafter following $\pi$.
 
-\includegraphics[width=6.26772in,height=3.63889in]{media/image8.png}
+\includegraphics[width=\columnwidth]{media/image8.png}
 
 \textbf{115. Describe the Bellman equations and their role in RL?}
 
@@ -1895,13 +1898,13 @@ action-value function?}
 
 For finite MDP's policies, they can be partially ordered:
 
-\includegraphics[width=5.58355in,height=0.34317in]{media/image39.png}
+\includegraphics[width=\columnwidth]{media/image39.png}
 
 This means that there are always one or more policies that are better or
 equal to all the others. These are optimal policies. Optimal policies
 share the same state-value function and action-value function.
 
-\includegraphics[width=4.63021in,height=1.04603in]{media/image9.png}
+\includegraphics[width=\columnwidth]{media/image9.png}
 
 Basically the optimal value function and the optimal action-value
 function return the expected return (reward) for following the optimal
@@ -1914,13 +1917,13 @@ action-value function?}
 The value of a state under an optimal policy must equal the expected
 return for the best action from that state
 
-\includegraphics[width=6.26772in,height=1.51389in]{media/image31.png}
+\includegraphics[width=\columnwidth]{media/image31.png}
 
 Q is the unique solution of this \emph{system of nonlinear equations}.
 Once we have Q* we can further calculate the optimal policy by taking
 the optimal action:
 
-\includegraphics[width=3.79843in,height=0.89604in]{media/image28.png}
+\includegraphics[width=\columnwidth]{media/image28.png}
 
 \textbf{118. How to solve Bellman optimality equations?}
 
@@ -1965,7 +1968,7 @@ V(policy\_i) doesn't need to converge, just move policy towards best one
 
 \textit{Value iteration}:
 
-\includegraphics[width=3.60938in,height=0.46166in]{media/image34.png}
+\includegraphics[width=\columnwidth]{media/image34.png}
 
 \begin{itemize}
 \item
@@ -2036,7 +2039,7 @@ initially unreliable, we need to explore until optimal!)
 Previous states receive a portion of the difference to successors.
 difficult for analysis
 
-\includegraphics[width=3.49479in,height=0.67429in]{media/image7.png}
+\includegraphics[width=\columnwidth]{media/image7.png}
 
 \begin{itemize}
 \item
@@ -2062,19 +2065,19 @@ take action a, follow the current policy thereafter)
 Suppose we have the optimal Q function → optimal policy is argmax\_b
 Q(s, b)
 
-\includegraphics[width=4.90928in,height=3.50521in]{media/image3.png}
+\includegraphics[width=\columnwidth]{media/image3.png}
 \end{quote}
 
 Pseudo code:
 
-\includegraphics[width=5.45737in,height=2.02158in]{media/image14.png}
+\includegraphics[width=\columnwidth]{media/image14.png}
 
 \textbf{126. What are the updates in Q-learning? How to assure
 exploration?}
 
 assure exploration → epsilon - greedy!
 
-\includegraphics[width=4.86979in,height=3.00024in]{media/image4.png}
+\includegraphics[width=\columnwidth]{media/image4.png}
 
 \textbf{127. How to use function approximation in RL?}
 
